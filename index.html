@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-view Solar</title>
+    <link rel="stylesheet" href="styles.css?v=18">
+    <script src="script.js?v=8" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="media/logo-nav.png" alt="Ex-view Solar Logo" class="nav-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://ex-view.com/empleos/" target="_blank">Trabaja con nosotros</a></li>
+                <li><a href="https://ex-view.com/empleos/" target="_blank">Sostenibilidad</a></li>
+                <li><a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
+                        class="btn-demo" target="_blank">Agendar demo</a></li>
+                <li><a href="https://d48p9darmym8b.cloudfront.net" target="_blank">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="video-container-hero">
+                <video autoplay loop muted playsinline>
+                    <!-- El video de fondo está aquí -->
+                    <source src="media/hero.mp4" type="video/mp4">
+                </video>
+                <!-- Overlay con gradiente: más opaco a la izquierda, más transparente a la derecha -->
+                <div class="overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <!-- Columna Izquierda: Textos y botón -->
+                <div class="hero-column left">
+                    <p class="subtitle">LIDERANDO LA TRANSICIÓN HACIA UN FUTURO ENERGÉTICO SIN LÍMITES</p>
+                    <h1>EX-VIEW SOLAR</h1>
+                    <h2>Solución inteligente para instalaciones solares</h2>
+                    <p class="description">Una plataforma todo-en-uno que transforma la gestión de activos solares
+                        mediante una suscripción mensual de valor fijo.</p>
+
+                    <ul class="features-list">
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            No hay costos ocultos por megavatio.
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            No por cantidad de usuarios, ni por restricciones en funcionalidad.
+                        </li>
+                    </ul>
+
+                    <a href="#site-footer" class="btn-primary">Contáctanos</a>
+                </div>
+
+                <!-- Columna Derecha: Espacio para mostrar el video de fondo -->
+                <div class="hero-column right">
+                    <!-- Esta columna está vacía para permitir que el video de fondo se vea claramente, manteniendo la distribución equitativa (mismo tamaño) -->
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services-section">
+            <div class="services-layout">
+                <!-- Columna Izquierda: Lista de servicios (scrollable) -->
+                <div class="services-list">
+                    <!-- Servicio 1 -->
+                    <div class="service-item">
+                        <img src="media/pathfinder.jpg" alt="Pathfinder" class="service-img">
+                        <div class="service-content">
+                            <h3>Topografía Digital y Seguimiento de Avance de Obra fotovoltaica</h3>
+                            <!-- <button class="btn-yellow btn-small" onclick="openModal('modal-pathfinder')">Ver
+                                más</button> -->
+                        </div>
+                    </div>
+                    <!-- Servicio 2 -->
+                    <div class="service-item">
+                        <img src="media/thermoscope.png" alt="Thermoscope" class="service-img">
+                        <div class="service-content">
+                            <h3>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h3>
+                            <button class="btn-yellow btn-small" ">Ver
+                                más</button>
+                                <!-- onclick=" openModal('modal-thermoscope') -->
+                        </div>
+                    </div>
+                    <!-- Servicio 3 -->
+                    <div class="service-item">
+                        <img src="media/sentinel.png" alt="Sentinel" class="service-img">
+                        <div class="service-content">
+                            <h3>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h3>
+                            <button class="btn-yellow btn-small">Ver más</button>
+                            <!-- onclick="openModal('modal-sentinel')" -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Sticky con Logo y texto -->
+                <div class="services-sidebar">
+                    <div class="sidebar-content">
+                        <img src="media/logo-nav.png" alt="Ex-view Logo" class="sidebar-logo">
+                        <p>Liderando una revolución que redefine el futuro de la industria solar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nueva sección: Eficiencia Tecnológica -->
+        <section id="tecnologia" class="tech-section">
+            <div class="tech-container">
+                <!-- Columna Izquierda (25% en desktop) -->
+                <div class="tech-text">
+                    <h2>Eficiencia Respaldada por Tecnología Avanzada</h2>
+                    <p>Cada funcionalidad está diseñada para mejorar la gestión de activos solares: diagnóstico
+                        automático, alertas tempranas y reportes precisos que garantizan decisiones informadas.</p>
+                </div>
+
+                <!-- Columna Derecha (75% en desktop) - Carrusel -->
+                <div class="tech-carousel-wrapper">
+                    <!-- Nuevo wrapper interno para ocultar el scroll de las imágenes sin recortar los botones flotantes -->
+                    <div class="carousel-viewport">
+                        <div class="carousel-container" id="tech-carousel">
+                            <div class="carousel-track">
+                                <!-- Las imágenes se pueden agregar o cambiar aquí -->
+                                <div class="carousel-slide">
+                                    <img src="media/2-carousel.jpg" alt="Tecnología 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/3-carousel.jpg" alt="Tecnología 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/4-carousel.jpg" alt="Tecnología 4">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/5-carousel.jpg" alt="Tecnología 5">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/6-carousel.jpg" alt="Tecnología 6">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/7-carousel.jpg" alt="Tecnología 6">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/8-carousel.jpg" alt="Tecnología 6">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/9-carousel.jpg" alt="Tecnología 6">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="media/10-carousel.jpg" alt="Tecnología 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Anterior">&#10094;</button>
+                    <button class="carousel-btn next-btn" id="carousel-next" aria-label="Siguiente">&#10095;</button>
+                    <div class="carousel-indicators" id="carousel-indicators"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nueva Sección: Detalles de Productos Ex-View Solar -->
+        <section id="productos" class="product-detail-section">
+            <!-- <div class="main-logo-container">
+                <img src="media/Exviewsolarlogo.png" alt="Ex-View Solar" class="main-product-logo">
+            </div> -->
+
+            <!-- Primera Parte: Thermoscope -->
+            <div class="product-block">
+                <!-- Zona superior: Imagen/Texto y Video -->
+                <div class="product-intro">
+                    <div class="product-info">
+                        <img src="media/thermoscope.png" alt="Thermoscope" class="product-logo-img">
+                        <p class="product-description">
+                            Integra la <strong>captura de datos con drones</strong> y equipos eléctricos con
+                            <strong>procesamiento avanzado de
+                                inteligencia artificial</strong> para identificar anomalías, fallos y sus causas. La
+                            solución
+                            automatiza las <strong>inspecciones termográficas</strong> y entrega <strong>reportes
+                                certificados y
+                                tableros
+                                gerenciales</strong> claros, permitiendo optimizar el <strong>mantenimiento y certificar
+                                el estado de la
+                                planta</strong> fotovoltaica con agilidad y total confianza.
+                        </p>
+                    </div>
+                    <div class="product-video">
+                        <video autoplay loop muted playsinline>
+                            <source src="media/thermoscope.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Zona inferior: Funcionalidades (4 columnas) -->
+                <h3 class="features-title">Thermoscope funcionalidades</h3>
+                <div class="product-features">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <img src="media/inspecTermica.jpg" alt="Inspección térmica">
+                        <h3>Inspección térmica</h3>
+                        <p>Recolección semiautomatizad a de información.</p>
+                        <br>
+                        <ul>
+                            <li>Gestión de drones propios o del cliente para la captura de información</li>
+                            <li>Metodología estandarizada de captura</li>
+                            <li>Cumplimiento del estándar IEC 62446–3:2017 y la norma RAC-100</li>
+                        </ul>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <img src="media/gestActivos.jpg" alt="Gestión de activos">
+                        <h3>Gestión de activos</h3>
+                        <p>Inspección y optimización de los activos energéticos.</p>
+                        <br>
+                        <ul>
+                            <li>Clasificación de anomalías automáticas con IA</li>
+                            <li>Monitoreo del ciclo de vida del activo</li>
+                            <li>Monitoreo de evolución de las anomalías (Multitemporalidad)</li>
+                            <li>Análisis de eficiencia de páneles</li>
+                            <li>Reportes automatizados y ad-hoc</li>
+                            <li>Herramientas colaborativas</li>
+                        </ul>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <img src="media/ia.jpg" alt="Inteligencia artificial">
+                        <h3>Inteligencia artificial</h3>
+                        <p>Modelos de simulación y análisis de información.</p>
+                        <br>
+                        <ul>
+                            <li>Machine learning con patrones de reconocimiento para pronósticos de generación,
+                                detección de anomalías y mantenimiento predictivo</li>
+                            <li>Análisis de series de tiempo y modelos estadísticos para factores que impacten la curva
+                                IV</li>
+                            <li>Visualización inteligente</li>
+                            <li>Sistemas de información Geográfica para modelos térmicos de radiación, sombras y
+                                rendimiento</li>
+                        </ul>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <img src="media/visualizacion.jpg" alt="Visualización remota">
+                        <h3>Visualización remota</h3>
+                        <p>Acciones correctivas de mantenimiento en campo.</p>
+                        <br>
+                        <ul>
+                            <li>Lista de acciones para corrección</li>
+                            <li>GPS y mapa asistido para ubicación de defectos</li>
+                            <li>Guías asistidas de mantenimiento</li>
+                            <li>Detalles de notas, comentarios, documentos y fotos</li>
+                            <li>Actualización de mantenimiento e integración con sistemas de Clientes</li>
+                            <li>Referenciación de números de serie de elementos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda Parte: Sentinel -->
+            <div class="product-block">
+                <!-- Zona superior: Imagen/Texto y Video -->
+                <!-- <div class="product-intro">
+                    <div class="product-info">
+                        <img src="media/sentinel.png" alt="Sentinel" class="product-logo-img">
+                        <p class="product-description">
+                            Integra la <strong>captura de datos con drones</strong> y equipos eléctricos con
+                            <strong>procesamiento avanzado de
+                                inteligencia artificial</strong> para identificar anomalías, fallos y sus causas. La
+                            solución
+                            automatiza las <strong>inspecciones termográficas</strong> y entrega <strong>reportes
+                                certificados y
+                                tableros
+                                gerenciales</strong> claros, permitiendo optimizar el <strong>mantenimiento y certificar
+                                el estado de la
+                                planta</strong> fotovoltaica con agilidad y total confianza.
+                        </p>
+                    </div>
+                    <div class="product-video">
+                        <video autoplay loop muted playsinline>
+                            <source src="media/sentinel.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </div> -->
+
+                <!-- Zona inferior: Funcionalidades (4 columnas) -->
+                <h3 class="features-title">Sentinel funcionalidades</h3>
+                <div class="product-features">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <img src="media/intComponentes.jpg" alt="Integración de componentes">
+                        <h3>Integración de componentes</h3>
+                        <p>Recolección automatizada de información en tiempo real.</p>
+                        <br>
+                        <ul>
+                            <li>Integración directa con datos de inversores, Strings, STS, Combiner Boxes y sistemas
+                                SCADA.</li>
+                            <li>Integración con estaciones meteorológicas en línea y de sitio, PLC, HMI.</li>
+                            <li>Integración con sistemas satelitales y software de medición termográfica y de radiación
+                                solar.</li>
+                            <li>Cumplimiento del estándar IEC 61724-1 / NREL para monitoreo y análisis de desempeño.
+                            </li>
+                            <li>Cumplimiento del estándar IEC 61853 para monitoreo del comportamiento bajo condiciones
+                                no STC.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <img src="media/monitoreo.jpg" alt="Monitoreo remoto">
+                        <h3>Monitoreo remoto</h3>
+                        <p>Inspección y optimización de los activos energéticos.</p>
+                        <br>
+                        <ul>
+                            <li>Clasificación automática de anomalías con IA.</li>
+                            <li>Monitoreo del ciclo de vida del activo.</li>
+                            <li>Monitoreo de evolución de anomalías (multitemporalidad).</li>
+                            <li>Análisis de eficiencia de paneles.</li>
+                            <li>Reportes automatizados y ad-hoc.</li>
+                            <li>Herramientas colaborativas.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <img src="media/kpi.jpg" alt="KPI y pronósticos">
+                        <h3>KPI’s y Pronósticos</h3>
+                        <p>Modelos de simulación y análisis de información.</p>
+                        <br>
+                        <ul>
+                            <li>Machine learning con reconocimiento de patrones para pronósticos de generación,
+                                detección de anomalías y mantenimiento predictivo.</li>
+                            <li>Análisis de series de tiempo y modelos estadísticos para factores que impactan la curva
+                                IV.</li>
+                            <li>Visualización inteligente.</li>
+                            <li>Sistemas de información geográfica para modelos térmicos de radiación, sombras y
+                                rendimiento.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <img src="media/cmms.jpg" alt="CMMS Integrado">
+                        <h3>CMMS Integrado</h3>
+                        <p>Acciones correctivas de mantenimiento en campo.</p>
+                        <br>
+                        <ul>
+                            <li>Lista de acciones para corrección.</li>
+                            <li>GPS y mapa asistido para ubicación de defectos.</li>
+                            <li>Guías asistidas de mantenimiento.</li>
+                            <li>Detalles de notas, comentarios, documentos y fotos.</li>
+                            <li>Actualización de mantenimiento.</li>
+                            <li>Integración con sistemas de mantenimiento de clientes.</li>
+                            <li>Referenciación de números de serie de elementos.</li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador de Video y Sección Experiencia -->
+        <div class="video-experiencia-wrapper">
+            <div class="video-bg-split">
+                <section class="video-separator">
+                    <div class="video-container">
+                        <video controls playsinline>
+                            <source src="media/exviewsolar.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </section>
+            </div>
+
+            <section id="experiencia" class="experiencia-section">
+                <div class="experiencia-container">
+                    <div class="exp-btn-container">
+                        <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn-outline-white">Agendar Demo</a>
+                    </div>
+                    
+                    <div class="exp-intro">
+                        <div class="exp-graphic">
+                            <img src="media/experiencia.png" alt="+15 años de experiencia">
+                        </div>
+                        <div class="exp-text">
+                            <h2>Una suscripción integral<br>con valor fijo mensual</h2>
+                            <p>EX-VIEW Solar ofrece un modelo de suscripción escalable donde nuestros clientes obtienen <strong>ahorros de hasta a un 50%</strong> en comparación con soluciones tradicionales basada en MW, licencias, costos variables o servicios fragmentados</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-stats-grid">
+                        <div class="exp-stat-item">
+                            <h3>+300</h3>
+                            <p>Proyectos<br>Implementados</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+80</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+5</h3>
+                            <p>GWP Inspeccionados</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+80</h3>
+                            <p>GWP Monitoreados</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+8000</h3>
+                            <p>Horas de captura en<br>termografía</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+10</h3>
+                            <p>Años en O&M y TAM</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+450</h3>
+                            <p>Reportes certificados<br>de termografías</p>
+                        </div>
+                        <div class="exp-stat-item">
+                            <h3>+9</h3>
+                            <p>Proyectos en<br>diferentes paises</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Nueva Sección: Capacidad Funcional -->
+        <section id="capacidad-funcional" class="capacidad-section">
+            <div class="capacidad-header">
+                <h3 class="features-title">Capacidad funcional</h3>
+                <p class="capacidad-description">Una solución web que permite administrar digital e integralmente todos
+                    sus activos fotovoltaicos: Capture, Almacene, Digitalice, Inspeccione, Analice, Gestione.</p>
+            </div>
+
+            <div class="funcional-carousel-wrapper">
+                <div class="carousel-viewport">
+                    <div class="carousel-container" id="funcional-carousel">
+                        <div class="carousel-track">
+                            <!-- Items -->
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/18.png" alt="Captura de realidad 3D">
+                                <p>Captura de realidad 3D</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/19.png" alt="Monitoreo en tiempo real">
+                                <p>Monitoreo en tiempo real</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/20.png" alt="Procesamiento y análisis AI de anomalías">
+                                <p>Procesamiento y análisis AI de anomalías</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/21.png" alt="Certificación termográfica">
+                                <p>Certificación termográfica</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/22.png" alt="CMMS - Gestión de mantenimientos">
+                                <p>CMMS - Gestión de mantenimientos</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/23.png" alt="Información estado de componentes">
+                                <p>Información estado de componentes.</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/24.png" alt="O&M Remoto y Geo-Referenciado">
+                                <p>O&M Remoto y Geo-Referenciado</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/25.png" alt="Indiadores PR,EPI,PPI, I-V, pronósticos">
+                                <p>Indiadores PR,EPI,PPI, I-V, pronósticos</p>
+                            </div>
+                            <div class="carousel-slide funcional-slide">
+                                <img src="media/funcional/26.png" alt="Soporte al cliente">
+                                <p>Soporte al cliente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles -->
+                <button class="carousel-btn prev-btn" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next-btn" aria-label="Siguiente">&#10095;</button>
+                <div class="carousel-indicators"></div>
+            </div>
+
+            <!-- Botón de Contacto -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#site-footer" class="btn-yellow"
+                    style="display: inline-block; padding: 12px 30px; font-size: 1.1rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Contáctanos</a>
+            </div>
+        </section>
+
+        <!-- Gestión Integrada Section -->
+        <section id="gestion-integrada" class="gestion-section"
+            style="background-color: #f8fafc; padding: 1rem 5% 5rem;">
+            <div class="gestion-header" style="text-align: center; max-width: 900px; margin: 0 auto 4rem auto;">
+                <h2 class="features-title" style="margin-bottom: 1.5rem;">Gestión integrada de activos solares: captura,
+                    análisis y optimización</h2>
+                <div class="title-line" style="margin: 0 auto 3rem auto;"></div>
+                <p class="gestion-description" style="font-size: 1.15rem; color: #475569; line-height: 1.6;">EX-VIEW
+                    Solar es una plataforma en la nube que integra la captura de datos de parques solares con
+                    inteligencia artificial para realizar análisis avanzados de rendimiento, automatizar inspecciones
+                    termográficas y generar reportes técnicos y gerenciales con agilidad y precisión.</p>
+            </div>
+            <div class="gestion-grid">
+                <div class="gestion-card">
+                    <img src="media/integrada/inspecciona.png" alt="Inspecciona">
+                    <h3>Inspecciona</h3>
+                    <p>En EX-VIEW Solar puedes integrar los vuelos termográficos dentro de tu suscripción y visualizar
+                        tus activos en un gemelo digital accesible desde cualquier lugar del mundo.</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/centralice.png" alt="Centralice">
+                    <h3>Centralice</h3>
+                    <p>Integre datos de inversores, strings, baterias, estaciones meteorológicas en línea y de sitio,
+                        PLC, HMI y sistemas SCADA para unificar los datos y análisis de su cartera solar en una única
+                        fuente de datos confiables.</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/Analiza.png" alt="Analiza">
+                    <h3>Analiza</h3>
+                    <p>En minutos, los datos son procesados de manera automática y analizados mediante algoritmos de IA
+                        propietarios de EX-VIEW Solar con confiabilidad superior al 99.1% en la identificación de
+                        anomalías.</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/Verifica.png" alt="Verifica">
+                    <h3>Verifica</h3>
+                    <p>Los resultados son validados y certificados por termógrafos nivel I y nivel II con experiencia en
+                        parques solares, en cumplimiento con el estándar IEC-62446.</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/Acciona.png" alt="Acciona">
+                    <h3>Acciona</h3>
+                    <p>EX-VIEW Solar clasifica recomendaciones predictivas y correctivas de mantenimiento para controlar
+                        la ejecución de acciones que garanticen el óptimo funcionamiento del parque solar.</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/Gestione.png" alt="Gestione">
+                    <h3>Gestione</h3>
+                    <p>Mantenimiento Dinámico: Tickets, Cronogramas, Ordenes, equipos y suministros, profesionales y
+                        técnicos</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/Controla.png" alt="Controla">
+                    <h3>Controla</h3>
+                    <p>La solución móvil de EX-VIEW Solar permite a los técnicos identificar anomalías y su ubicación
+                        exacta mediante guías visuales georreferenciadas, facilitando la asignación y seguimiento de
+                        tareas.</p>
+                </div>
+                <div class="gestion-card">
+                    <img src="media/integrada/Planea.png" alt="Planea">
+                    <h3>Planea</h3>
+                    <p>EX-VIEW Solar integra herramientas avanzadas de geolocalización, diseño y seguimiento de avance y
+                        costos de obras en proyectos de instalaciones solares.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alianza Estratégica Section -->
+        <section id="alianza" class="alliance-section">
+            <div class="alliance-container">
+                <!-- Columna Izquierda: Imágenes -->
+                <div class="alliance-gallery">
+                    <div class="alliance-img-wrapper">
+                        <img src="media/ciudades/medellin.jpg" alt="Medellín">
+                    </div>
+                    <div class="alliance-img-wrapper">
+                        <img src="media/ciudades/miami.jpg" alt="Miami">
+                    </div>
+                    <div class="alliance-img-wrapper">
+                        <img src="media/ciudades/madrid.jpeg" alt="Madrid">
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Texto -->
+                <div class="alliance-content">
+                    <h2 class="main-title">EX-VIEW SOLAR: <br>La alianza estratégica de cuatro líderes del mercado</h2>
+                    <p>EBEDIX, pionera en IA e ingeniería digital, Drones Sky Solutions, líder en captura de datos
+                        solares con drones, y FlyNorth, experta en análisis y certificación termográfica, se unen para
+                        transformar la gestión de parques solares en el mundo.</p>
+
+                    <p>Esta alianza da origen a EX-View Solar, una solución SaaS pensada para acelerar la adopción a
+                        tecnologías de clase mundial, con precios accesibles. En un contexto donde las soluciones
+                        tradicionales suelen ser costosas, cobrar por megavatio o limitar el análisis con herramientas
+                        fragmentadas, EX-VIEW Solar se presenta como una alternativa completa, eficiente y adaptada a
+                        las necesidades reales del sector energético.</p>
+
+                    <p>EX-View Solar integra captura de datos, análisis inteligente y acción operativa en una sola
+                        plataforma, con un modelo de suscripción mensual todo incluido, sin costos ocultos ni cobros
+                        adicionales por funciones esenciales.</p>
+
+                    <p>Con sedes en Medellín, Miami y Madrid, EX-VIEW Solar brinda capacidad de operación y software
+                        local e internacional a todos nuestros clientes.</p>
+
+                    <!-- Logos de las empresas aliadas -->
+                    <div class="alliance-logos">
+                        <img src="media/empresas/ebedix.png" alt="Ebedix">
+                        <img src="media/empresas/skysolutions.png" alt="Sky Solutions">
+                        <img src="media/empresas/flynorth.png" alt="FlyNorth">
+                        <img src="media/empresas/sams.png" alt="SAMS">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diferencias Section -->
+        <section id="diferencias" class="difference-section">
+            <div class="difference-container">
+                <h2 class="features-title" style="text-align: center; margin-bottom: 4rem;">EX-View es diferente</h2>
+
+                <div class="table-responsive">
+                    <table class="difference-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="highlight-col">EX-VIEW SOLAR <img src="media/Exviewsolarlogo.png"
+                                        alt="Logo EX"
+                                        style="display:inline; height:24px; vertical-align:middle; border-radius:4px; margin-left: 5px;">
+                                </th>
+                                <th>OTROS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IEC y RAC-100</td>
+                                <td class="highlight-col">IEC 62446 y RAC-100 OK</td>
+                                <td>NO TODOS, COSTOS ADICIONALES</td>
+                            </tr>
+                            <tr>
+                                <td>COBERTURA DE TODO EL PARQUE</td>
+                                <td class="highlight-col">100% TODOS LOS PANELES. ORTOFOTO TÉRMICA Y RGB</td>
+                                <td>SOLO LOS PANELES CON PROBLEMAS</td>
+                            </tr>
+                            <tr>
+                                <td>TIEMPO DE ENTREGA</td>
+                                <td class="highlight-col">4-5 DÍAS</td>
+                                <td>10-20 DÍAS</td>
+                            </tr>
+                            <tr>
+                                <td>NÚMERO DE ANOMALÍAS DETECTADAS</td>
+                                <td class="highlight-col">17+</td>
+                                <td>DEPENDE DE MÓDULOS COMPRADOS</td>
+                            </tr>
+                            <tr>
+                                <td>CAPTURA INCLUIDA</td>
+                                <td class="highlight-col">SI (Posibilidad de Gestionar sus drones)</td>
+                                <td>NO (Cobro de Software + Captura por MW)</td>
+                            </tr>
+                            <tr>
+                                <td>GEORREFERENCIACIÓN INCLUIDA</td>
+                                <td class="highlight-col">SI. GIS POR PARQUE Y PANEL</td>
+                                <td>NO TODOS, COSTOS ADICIONALES</td>
+                            </tr>
+                            <tr>
+                                <td>RESTRICCIÓN DE USUARIOS</td>
+                                <td class="highlight-col">NO</td>
+                                <td>SI</td>
+                            </tr>
+                            <tr>
+                                <td>RESTRICCIÓN DE FUNCIONALIDADES</td>
+                                <td class="highlight-col">NO. CLIENTE ES DUEÑO DE INFORMACIÓN</td>
+                                <td>SI. CLIENTE PIERDE DATOS SI NO RENUEVA</td>
+                            </tr>
+                            <tr>
+                                <td>ACCESO A MÓDULO DE REPORTES</td>
+                                <td class="highlight-col">SI</td>
+                                <td>NO. SOLO REPORTE BÁSICO</td>
+                            </tr>
+                            <tr>
+                                <td>COSTO POR MW</td>
+                                <td class="highlight-col">NO</td>
+                                <td>SI</td>
+                            </tr>
+                            <tr>
+                                <td>PRECIO FIJO Y CLARO SOLUCIÓN TERMOGRAFÍA</td>
+                                <td class="highlight-col">SI. SUSCRIPCIÓN ANUAL</td>
+                                <td>NO. ESTÁ ASOCIADA A MW, COSTO EXTRA</td>
+                            </tr>
+                            <tr>
+                                <td>PRECIO FIJO Y CLARO SOLUCIÓN REMOTA</td>
+                                <td class="highlight-col">SI. VALOR FIJO POR USUARIO</td>
+                                <td>NO. ESTÁ ASOCIADA A MW, COSTO EXTRA</td>
+                            </tr>
+                            <tr>
+                                <td>CERTIFICACIÓN INCLUIDA</td>
+                                <td class="highlight-col">SI. PARQUE Y EQUIPOS. CALIBRACIÓN</td>
+                                <td>NO TODOS, COSTOS ADICIONALES</td>
+                            </tr>
+                            <tr>
+                                <td>CONTROL DE CALIDAD EN FASES</td>
+                                <td class="highlight-col">SI. REVISIONES Y RECAPTURA INCLUIDA</td>
+                                <td>NO TODOS, COSTOS ADICIONALES</td>
+                            </tr>
+                            <tr>
+                                <td>SOPORTE A USUARIOS</td>
+                                <td class="highlight-col">SI. SOLUCIÓN HECHA EN COLOMBIA. SOPORTE LOCAL E INTERNACIONAL
+                                </td>
+                                <td>SOLO EN CIERTOS PAÍSES. BAJO NIVEL DE SOPORTE A USUARIOS EN LATAM</td>
+                            </tr>
+                            <tr>
+                                <td>GARANTÍA DE CALIDAD EN TERMOGRAFÍAS</td>
+                                <td class="highlight-col">SI. 100% SI HAY INCONSISTENCIAS</td>
+                                <td>NO. DEPENDEN DE EMPRESA DE DRONES</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por Qué Elegirnos Section -->
+        <section id="por-que-elegirnos" class="eligen-section">
+            <div class="eligen-header">
+                <h2 class="features-title">¿Por qué las empreas líderes elígen a EX-VIEW?</h2>
+            </div>
+            <div class="eligen-zigzag">
+                <!-- Item 1 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/suscripcion.png" alt="Suscripción integral">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>Una suscripción integral con valor fijo mensual</h3>
+                        <p>Ahorra hasta un 50 % en análisis termográficos con nuestra solución solar integral.
+                            Tecnología
+                            avanzada y procesos automatizados integrados en una plataforma única sin importar los MWh
+                            que
+                            gestionen en tus parques solares. Una Suscripción de valor fijo mensual para que planifiques
+                            tus
+                            costos sin sorpresas y enfocarse en una gestión efectiva.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/garantia.png" alt="Satisfacción y garantías">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>100% satisfacción y garantías a nuestros clientes</h3>
+                        <p>En todo lo que hacemos, el cliente es lo primero. Una solución de clase mundial, accesible
+                            para
+                            todos, que entrega análisis de activos fotovoltaicos en tiempo récord y con más del 99 % de
+                            precisión. Con tecnología avanzada y procesos optimizados, te ayudamos a tomar decisiones
+                            rápidas y seguras para maximizar la eficiencia de tu parque solar.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/gestion.png" alt="Gestión centralizada">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>Gestión centralizada para un control total</h3>
+                        <p>Con nuestra plataforma integrada de captura, monitoreo en tiempo real y procesamiento
+                            inteligente, gestionas todas tus inspecciones solares de manera segura, eficiente y desde un
+                            solo lugar. En tiempo real y con colaboración activa, acelera las inspecciones, optimiza el
+                            mantenimiento y maximiza el rendimiento de tus activos solares.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/ai.png" alt="Modelado avanzado inteligente">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>Modelado avanzado inteligente para gestionar pérdidas de energía</h3>
+                        <p>Utilizamos las últimas tecnologías de inteligencia artificial y modelos probados, respaldados
+                            por
+                            resultados de millones de termografías realizadas en todo el mundo bajo diversas condiciones
+                            climáticas.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/planeacion.png" alt="Planeación focalizada de mantenimiento">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>Planeación focalizada de mantenimiento</h3>
+                        <p>Nuestra solución predictiva y módulo propietario de CMMS, se integra con tu gestión experta
+                            para
+                            optimizar el rendimiento, maximizar tu inversión y reducir costos de mantenimiento. Controla
+                            la
+                            gestión de las actividades y pendientes para cada equipo de trabajo y cada orden de
+                            servicio.
+                            Detecta y resuelve rápidamente anomalías térmicas, asegurando el control preciso de las
+                            pérdidas
+                            y la máxima eficiencia energética.</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/gemelos.png" alt="Gemelo digital">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>Gemelo digital de tus activos solares para establecer una línea base completa de gestión
+                        </h3>
+                        <p>Con las inspecciones termográficas periódicas del modelo Ex-View Solar, puedes construir una
+                            línea base de rendimiento sólida que te permite analizar y comparar tus activos a lo largo
+                            del
+                            tiempo. Al integrar vuelos de drones directamente en tu suscripción, gestionas tus parques
+                            solares desde un gemelo digital dinámico, accesible en cualquier momento y desde cualquier
+                            lugar
+                            del mundo.</p>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div class="zigzag-item">
+                    <div class="zigzag-icon">
+                        <img src="media/eligen/soporte.png" alt="Soporte para garantías">
+                    </div>
+                    <div class="zigzag-text">
+                        <h3>Soporte para garantías y reclamaciones de seguros</h3>
+                        <p>Generamos un historial digital sólido para rastrear tasas de fallos en módulos a lo largo del
+                            tiempo. El acceso a datos estandarizados y de alta calidad aumenta significativamente las
+                            posibilidades de éxito en tus reclamaciones de garantía y seguros.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Líderes y Testimonios Section -->
+        <section id="lideres" class="lideres-section">
+            <div class="lideres-header">
+                <h2 class="main-title">Los líderes en el sector confían en nosotros</h2>
+                <p>Únete al futuro de la administración optimizada para empresas solares. Accede a una plataforma de
+                    clase mundial, confiable y referenciada</p>
+            </div>
+
+            <div class="lideres-marquee" id="lideres-marquee">
+                <div class="marquee-track">
+                    <!-- Set 1 -->
+                    <img src="media/lideres/afinia.png" alt="Afinia">
+                    <img src="media/lideres/argos.png" alt="Argos">
+                    <img src="media/lideres/celsia.png" alt="Celsia">
+                    <img src="media/lideres/ciudadluz.png" alt="Ciudad Luz">
+                    <img src="media/lideres/copower.png" alt="Copower">
+                    <img src="media/lideres/edenor.png" alt="Edenor">
+                    <img src="media/lideres/energetica.png" alt="Energetica">
+                    <img src="media/lideres/epm.png" alt="EPM">
+                    <img src="media/lideres/equans.png" alt="Equans">
+                    <img src="media/lideres/exito.png" alt="Exito">
+                    <img src="media/lideres/greencol.png" alt="Greencol">
+                    <img src="media/lideres/greenenergy.png" alt="Green Energy">
+                    <img src="media/lideres/pereira.png" alt="Pereira">
+                    <img src="media/lideres/powerchina.png" alt="Powerchina">
+                    <img src="media/lideres/ventus.png" alt="Ventus">
+                    <img src="media/lideres/enersolax.png" alt="Enersolax">
+                    <!-- Set 2 for infinite effect -->
+                    <img src="media/lideres/afinia.png" alt="Afinia">
+                    <img src="media/lideres/argos.png" alt="Argos">
+                    <img src="media/lideres/celsia.png" alt="Celsia">
+                    <img src="media/lideres/ciudadluz.png" alt="Ciudad Luz">
+                    <img src="media/lideres/copower.png" alt="Copower">
+                    <img src="media/lideres/edenor.png" alt="Edenor">
+                    <img src="media/lideres/energetica.png" alt="Energetica">
+                    <img src="media/lideres/epm.png" alt="EPM">
+                    <img src="media/lideres/equans.png" alt="Equans">
+                    <img src="media/lideres/exito.png" alt="Exito">
+                    <img src="media/lideres/greencol.png" alt="Greencol">
+                    <img src="media/lideres/greenenergy.png" alt="Green Energy">
+                    <img src="media/lideres/pereira.png" alt="Pereira">
+                    <img src="media/lideres/powerchina.png" alt="Powerchina">
+                    <img src="media/lideres/ventus.png" alt="Ventus">
+                    <img src="media/lideres/enersolax.png" alt="Enersolax">
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">“La industria mundial de las energías renovables está creciendo
+                        rápidamente, con un enorme potencial para aquellos que apuntan alto, se comprometen primero y se
+                        mueven rápido. Energías Renovables Global de EY atraviesa la complejidad de este mercado
+                        cambiante para ayudar a acelerar su transición al mundo de la energía renovable.”</p>
+                    <div class="testimonial-author">
+                        <h4>Erick Cepeda</h4>
+                        <span>CEO Dicovery Consulting</span>
+                    </div>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">“La oferta de proveedores de plataformas integradas solares es muy
+                        limitada y, además, sus costos elevados para el mercado latinoamericano restringen el acceso a
+                        soluciones completas, escalables y accesibles.”</p>
+                    <div class="testimonial-author">
+                        <h4>Jérôme Barthe</h4>
+                        <span>Chief Operating Officer - Ouinex</span>
+                    </div>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">“La mayoría de las plataformas basan sus precios en megavatios y
+                        condicionan a inspecciones permanentes para mantener tu información activa en sus sistemas. A
+                        medida que se gestionan múltiples parques solares, aumentan los costos ocultos, impactando
+                        negativamente la rentabilidad.”</p>
+                    <div class="testimonial-author">
+                        <h4>Juan Pablo Umaña</h4>
+                        <span>Co-Founder Aurea Proyectos</span>
+                    </div>
+                </div>
+                <!-- Testimonio 4 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">“Gestionar parques solares a gran escala conlleva altos desafíos
+                        operativos: caídas de rendimiento, mantenimiento continuo, inspecciones frecuentes y análisis de
+                        datos complejos. Estos factores, si no se controlan adecuadamente, pueden ocasionar pérdidas
+                        millonarias”</p>
+                    <div class="testimonial-author">
+                        <h4>Alfredo Álvarez Laparte</h4>
+                        <span>Energy Leader, EY México</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Nos Avalan" -->
+        <section id="avalan" class="lideres-section" style="padding-top: 0;">
+            <div class="lideres-header">
+                <h2 class="main-title">Nos Avalan</h2>
+            </div>
+
+            <div class="lideres-marquee avalan-marquee">
+                <div class="marquee-track">
+                    <!-- Set 1 -->
+                    <img src="media/avalan/aeroespacial.png" alt="Aeroespacial">
+                    <img src="media/avalan/apple.png" alt="Apple">
+                    <img src="media/avalan/autodesk.png" alt="Autodesk">
+                    <img src="media/avalan/aws.png" alt="AWS">
+                    <img src="media/avalan/colegiomayor.png" alt="Colegio Mayor">
+                    <img src="media/avalan/dji.png" alt="DJI">
+                    <img src="media/avalan/dronelink.png" alt="Dronelink">
+                    <img src="media/avalan/eia.png" alt="EIA">
+                    <img src="media/avalan/epicgames.png" alt="Epic Games">
+                    <img src="media/avalan/esri.png" alt="Esri">
+                    <img src="media/avalan/ged.png" alt="GED">
+                    <img src="media/avalan/ing.png" alt="ING">
+                    <img src="media/avalan/metashape.png" alt="Metashape">
+                    <img src="media/avalan/microsoft.png" alt="Microsoft">
+                    <img src="media/avalan/oculus.png" alt="Oculus">
+                    <img src="media/avalan/pelagus.png" alt="Pelagus">
+                    <img src="media/avalan/pix4d.png" alt="Pix4D">
+                    <img src="media/avalan/qgis.png" alt="QGIS">
+                    <img src="media/avalan/skysolutions.png" alt="Sky Solutions">
+                    <img src="media/avalan/spacex.png" alt="SpaceX">
+                    <img src="media/avalan/ssl.png" alt="SSL">
+                    <img src="media/avalan/ultraly.png" alt="Ultraly">
+                    <img src="media/avalan/vreadynor.png" alt="Vready Nor">
+                    <img src="media/avalan/react.png" alt="React">
+                    <img src="media/avalan/27001.png" alt="27001">
+
+                    <!-- Set 2 (Clon para scroll infinito) -->
+                    <img src="media/avalan/aeroespacial.png" alt="Aeroespacial">
+                    <img src="media/avalan/apple.png" alt="Apple">
+                    <img src="media/avalan/autodesk.png" alt="Autodesk">
+                    <img src="media/avalan/aws.png" alt="AWS">
+                    <img src="media/avalan/colegiomayor.png" alt="Colegio Mayor">
+                    <img src="media/avalan/dji.png" alt="DJI">
+                    <img src="media/avalan/dronelink.png" alt="Dronelink">
+                    <img src="media/avalan/eia.png" alt="EIA">
+                    <img src="media/avalan/epicgames.png" alt="Epic Games">
+                    <img src="media/avalan/esri.png" alt="Esri">
+                    <img src="media/avalan/ged.png" alt="GED">
+                    <img src="media/avalan/ing.png" alt="ING">
+                    <img src="media/avalan/metashape.png" alt="Metashape">
+                    <img src="media/avalan/microsoft.png" alt="Microsoft">
+                    <img src="media/avalan/oculus.png" alt="Oculus">
+                    <img src="media/avalan/pelagus.png" alt="Pelagus">
+                    <img src="media/avalan/pix4d.png" alt="Pix4D">
+                    <img src="media/avalan/qgis.png" alt="QGIS">
+                    <img src="media/avalan/skysolutions.png" alt="Sky Solutions">
+                    <img src="media/avalan/spacex.png" alt="SpaceX">
+                    <img src="media/avalan/ssl.png" alt="SSL">
+                    <img src="media/avalan/ultraly.png" alt="Ultraly">
+                    <img src="media/avalan/vreadynor.png" alt="Vready Nor">
+                    <img src="media/avalan/react.png" alt="React">
+                    <img src="media/avalan/27001.png" alt="27001">
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div id="modal-pathfinder" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-pathfinder')">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <div class="modal-images">
+                            <img src="media/pathfinder.jpg" alt="Pathfinder Imagen">
+                            <!-- Más imágenes pueden ir aquí -->
+                        </div>
+                    </div>
+                    <div class="modal-right">
+                        <h2>Topografía Digital y Seguimiento de Avance de Obra fotovoltaica</h2>
+                        <div class="modal-text">
+                            <p>Aquí puedes agregar la descripción detallada del servicio "Pathfinder". El diseño
+                                permite
+                                tener texto extenso sin problemas. La información fluye naturalmente y, si hay
+                                mucho
+                                contenido, un scroll vertical aparecerá solo en esta columna derecha.</p>
+                            <p>Esto asegura que el usuario pueda seguir interactuando con las imágenes de la
+                                izquierda
+                                mientras lee el contenido completo sobre los beneficios de la topografía digital
+                                en
+                                proyectos fotovoltaicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-thermoscope" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-thermoscope')">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <div class="modal-images">
+                            <img src="media/thermoscope.png" alt="Thermoscope Imagen">
+                        </div>
+                    </div>
+                    <div class="modal-right">
+                        <h2>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h2>
+                        <div class="modal-text">
+                            <p>Detalle sobre el servicio de captura y termografía. Describe aquí las principales
+                                ventajas, metodologías de trabajo o beneficios técnicos y comerciales para la
+                                instalación solar y su operación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-sentinel" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-sentinel')">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <div class="modal-images">
+                            <img src="media/sentinel.png" alt="Sentinel Imagen">
+                        </div>
+                    </div>
+                    <div class="modal-right">
+                        <h2>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h2>
+                        <div class="modal-text">
+                            <p>Toda la información referente a la monitorización continua, el análisis de
+                                alertas
+                                tempranas, visualización de datos y cómo Sentinel previene fallos mayores en la
+                                planta
+                                solar aumentando el rendimiento operativo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-container">
+            <!-- Left: Logo & Social -->
+            <div class="footer-brand">
+                <!-- Se asume que este es el logo cuadrado. Puedes ajustarlo a la ruta exacta si difiere -->
+                <img src="media/Exviewsolarlogo.png" alt="Ex-View Solar Logo" class="footer-logo">
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/ebedix/" aria-label="LinkedIn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@ebedix" aria-label="YouTube" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Middle: Info -->
+            <div class="footer-info">
+                <ul>
+                    <li>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                        </span>
+                        +57 (604) 560-6352 (Sede Colombia)
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                            </svg>
+                        </span>
+                        Cra. 42 #3 Sur 81 Torre 1 Piso 15, Medellín, Colombia
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </span>
+                        <a href="mailto:solar@ex-view.com">solar@ex-view.com</a>
+                    </li>
+                </ul>
+                <p class="copyright">&copy; EX-VIEW SOLAR 2026</p>
+            </div>
+
+            <!-- Right: Legal -->
+            <div class="footer-legal">
+                <ul>
+                    <li><a href="https://ebedix.com/politicas/" target="_blank">Términos de servicio y políticas de
+                            privacidad</a></li>
+                    <li><a href="https://ebedix.com/legal/" target="_blank">Términos y servicios legales</a></li>
+                </ul>
+                <p class="dev-credits">Desarrollado por EXVIEW SOLAR Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
