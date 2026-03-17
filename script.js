@@ -289,6 +289,8 @@ document.addEventListener('DOMContentLoaded', () => {
             else touchEnd(); 
         });
 
+        track.style.touchAction = 'pan-y'; // Prevents native horizontal scroll to avoid touchcancel
+
         track.addEventListener('mousedown', touchStart);
         track.addEventListener('mousemove', touchMove);
         track.addEventListener('mouseup', touchEnd);
@@ -296,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         track.addEventListener('touchstart', touchStart, {passive: true});
         track.addEventListener('touchmove', touchMove, {passive: true});
         track.addEventListener('touchend', touchEnd);
+        track.addEventListener('touchcancel', touchEnd);
     });
 
     // --- Auto-scroll and Drag for Marquees ---

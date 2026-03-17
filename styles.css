@@ -36,8 +36,8 @@ header {
 }
 
 .nav-logo {
-    height: 150px;
-    /* Logo muchísimo más grande */
+    height: 45px;
+    width: auto;
     object-fit: contain;
 }
 
@@ -51,6 +51,7 @@ header {
     display: inline-block;
     letter-spacing: -0.5px;
 }
+
 
 nav ul {
     display: flex;
@@ -75,6 +76,93 @@ nav a.btn-demo {
     /* Eliminamos la raya amarilla (border-bottom) */
     color: var(--primary-color);
     font-weight: 600;
+}
+
+/* Banner Hero Section (New Section Before Full Hero) */
+.split-hero {
+    position: relative;
+    width: 100%;
+    /* Altura justa para el texto con padding simétrico */
+    padding: 6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-container-split {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-container-split video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-split {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 38, 52, 0.6);
+    /* Azul corporativo oscuro con transparencia */
+    z-index: 2;
+}
+
+.split-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    /* Todo centrado */
+    margin: 0 auto;
+}
+
+.split-title {
+    font-size: 69px;
+    font-weight: 800;
+    color: #ffffff;
+    /* Letras blancas */
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    /* Fuerte sombra para contraste */
+}
+
+.split-heading {
+    margin-bottom: 0;
+}
+
+.split-heading .heading-main {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #ffffff;
+    /* Letras blancas */
+    line-height: 1.2;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.split-heading .heading-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    /* Blanco ligeramente translúcido */
+    line-height: 1.4;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Hero Section */
@@ -218,75 +306,64 @@ nav a.btn-demo {
     object-fit: contain;
 }
 
-/* Services Section */
-.services-section {
-    padding: 6rem 5%;
-    position: relative;
-    /* background-image: url('media/seccion2.png'); */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.services-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.services-layout {
-    position: relative;
-    z-index: 2;
+/* Hero Services (Right Column) */
+.hero-column.right {
     display: flex;
-    max-width: 1440px;
-    margin: 0 auto;
-    gap: 4rem;
+    align-items: flex-end;
+    /* Align cards to the right side of the container horizontally */
+    justify-content: center;
+    /* Center cards vertically to match text left */
 }
 
-.services-list {
-    flex: 6;
+.hero-services {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    /* Constrain width to keep it looking like cards */
 }
 
-.service-item {
+.hero-service-item {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+.hero-service-item:hover {
+    transform: translateX(-10px);
+    /* Move left slightly on hover */
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.service-img {
-    width: 200px;
-    height: 150px;
+.hero-service-img {
+    width: 120px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
+    /* Adding subtle border to separate from background */
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.service-content {
+.hero-service-content {
     flex: 1;
 }
 
-.service-content h3 {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+.hero-service-content h3 {
+    font-size: 1.15rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
     line-height: 1.4;
-    font-weight: normal;
+    font-weight: 600;
 }
 
 .btn-yellow {
@@ -309,39 +386,6 @@ nav a.btn-demo {
 .btn-small {
     padding: 0.6rem 1.5rem;
     font-size: 0.95rem;
-}
-
-/* Sidebar Sticky */
-.services-sidebar {
-    flex: 4;
-}
-
-.sidebar-content {
-    position: sticky;
-    top: 100px;
-    background: transparent;
-    padding: 4rem 3rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: var(--text-white);
-    /* Se elimina o reduce la sombra ya que no hay fondo sólido */
-    box-shadow: none;
-}
-
-.sidebar-logo {
-    width: 180px;
-    margin-bottom: 2rem;
-    /* Si el logo es oscuro, el filtro lo vuelve blanco para destacar en el fondo azul oscuro */
-}
-
-.sidebar-content p {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #000000;
 }
 
 /* Tech Section */
@@ -717,7 +761,8 @@ nav a.btn-demo {
 .exp-btn-container {
     text-align: center;
     margin-bottom: 4rem;
-    margin-top: 1.5rem; /* Separar del video */
+    margin-top: 1.5rem;
+    /* Separar del video */
 }
 
 .btn-outline-white {
@@ -1014,8 +1059,10 @@ nav a.btn-demo {
 
 .lideres-marquee {
     width: 100%;
-    max-width: 1200px; /* Igualar al max-width de testimonials-grid */
-    margin: 0 auto 4rem auto; /* Centrar e inferior margen */
+    max-width: 1200px;
+    /* Igualar al max-width de testimonials-grid */
+    margin: 0 auto 4rem auto;
+    /* Centrar e inferior margen */
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -1039,9 +1086,11 @@ nav a.btn-demo {
 
 .marquee-track img {
     /* Mantenemos 4 logos visibles pero usamos mucho más del espacio disponible en altura y eliminamos casi todo el padding */
-    width: min(calc(1200px / 4), 25vw); 
-    height: 180px; /* Incrementado dramáticamente */
-    padding: 0 0.5rem; /* Padding mínimo para que ocupen máximo espacio */
+    width: min(calc(1200px / 4), 25vw);
+    height: 180px;
+    /* Incrementado dramáticamente */
+    padding: 0 0.5rem;
+    /* Padding mínimo para que ocupen máximo espacio */
     object-fit: contain;
     filter: grayscale(100%) opacity(0.6);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -1056,7 +1105,8 @@ nav a.btn-demo {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Exactamente 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Exactamente 2 columnas */
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -1339,32 +1389,41 @@ nav a.btn-demo {
 
 .modal-content {
     background-color: #ffffff;
-    width: 90%;
-    max-width: 1100px;
-    height: 80vh;
-    border-radius: 12px;
+    width: 95%;
+    max-width: 1200px;
+    height: 85vh;
+    border-radius: 24px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2.5rem;
+    top: 20px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
     font-weight: 300;
     color: #64748b;
     cursor: pointer;
     z-index: 10;
     line-height: 1;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
 }
 
 .close-btn:hover {
+    background: var(--secondary-color);
     color: var(--primary-color);
+    transform: rotate(90deg);
 }
 
 .modal-body {
@@ -1374,48 +1433,131 @@ nav a.btn-demo {
 
 .modal-left {
     flex: 1;
-    background-color: #f1f5f9;
-    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 3rem;
     overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .modal-images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .modal-images img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 16px;
     object-fit: cover;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.modal-images img:hover {
+    transform: scale(1.02);
 }
 
 .modal-right {
-    flex: 1.2;
-    padding: 3rem 4rem;
+    flex: 1.4;
+    padding: 4rem 4rem 3rem 4rem;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    background: #ffffff;
 }
 
 .modal-right h2 {
     color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    line-height: 1.3;
-    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.modal-right h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
 }
 
 .modal-text {
-    color: #475569;
-    font-size: 1.05rem;
-    line-height: 1.7;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.modal-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-text::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* Mejora de legibilidad para las listas en los popups */
+.modal-text ul {
+    list-style: none;
+    /* Quitamos viñetas por defecto */
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* Espaciado generoso entre items */
+}
+
+.modal-text li {
+    position: relative;
+    padding-left: 28px;
+    background: #f8fafc;
+    padding: 1rem 1rem 1rem 2.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    font-size: 0.95rem;
+    color: #334155;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-text li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.modal-text li::before {
+    content: "✓";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .modal-text p {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    color: #1e293b;
+}
+
+/* Ocultar el scroll en el body cuando el modal está activo */
+body.modal-open {
+    overflow: hidden;
 }
 
 /* Scrollbars personalizadas para modal */
@@ -1834,28 +1976,30 @@ nav a.btn-demo {
     }
 
     .marquee-track img {
-        width: 30vw; /* 3 logos aprox en teléfonos muy pequeños */
-        height: 120px; /* Incrementado dramáticamente en móviles */
+        width: 30vw;
+        /* 3 logos aprox en teléfonos muy pequeños */
+        height: 120px;
+        /* Incrementado dramáticamente en móviles */
         padding: 0 0.2rem;
     }
 
     /* Experiencia Section Mobile Twaks */
 
-    
+
     .exp-intro {
         flex-direction: column;
         gap: 2rem;
         text-align: center;
     }
-    
+
     .exp-text h2 {
         font-size: 1.8rem;
     }
-    
+
     .exp-text p {
         font-size: 1.1rem;
     }
-    
+
     .exp-stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem 1rem;

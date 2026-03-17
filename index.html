@@ -7,7 +7,8 @@
     <title>Ex-view Solar</title>
     <link rel="stylesheet" href="styles.css?v=18">
     <script src="script.js?v=8" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -28,6 +29,25 @@
     </header>
 
     <main>
+        <section class="split-hero">
+            <!-- Background Video -->
+            <div class="video-container-split">
+                <video autoplay loop muted playsinline>
+                    <source src="media/hero.mp4" type="video/mp4">
+                </video>
+                <div class="overlay-split"></div>
+            </div>
+
+            <!-- Centered Header Text -->
+            <div class="split-content">
+                <h1 class="split-title">EX-VIEW SOLAR</h1>
+                <h2 class="split-heading">
+                    <span class="heading-main">Gestión inteligente de activos solares.</span><br>
+                    <span class="heading-sub">Impulsando un futuro energético sin límites y masroductividad.</span>
+                </h2>
+            </div>
+        </section>
+
         <section class="hero">
             <div class="video-container-hero">
                 <video autoplay loop muted playsinline>
@@ -41,9 +61,9 @@
             <div class="hero-content">
                 <!-- Columna Izquierda: Textos y botón -->
                 <div class="hero-column left">
-                    <p class="subtitle">LIDERANDO LA TRANSICIÓN HACIA UN FUTURO ENERGÉTICO SIN LÍMITES</p>
+                    <!-- <p class="subtitle">LIDERANDO LA TRANSICIÓN HACIA UN FUTURO ENERGÉTICO SIN LÍMITES</p> -->
                     <h1>EX-VIEW SOLAR</h1>
-                    <h2>Solución inteligente para instalaciones solares</h2>
+                    <h2>Solución integral para instalaciones solares</h2>
                     <p class="description">Una plataforma todo-en-uno que transforma la gestión de activos solares
                         mediante una suscripción mensual de valor fijo.</p>
 
@@ -60,59 +80,43 @@
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            No por cantidad de usuarios, ni por restricciones en funcionalidad.
+                            No hay costos ocultos por cantidad de usuarios, ni por restricciones en funcionalidad.
                         </li>
                     </ul>
 
                     <a href="#site-footer" class="btn-primary">Contáctanos</a>
                 </div>
 
-                <!-- Columna Derecha: Espacio para mostrar el video de fondo -->
+                <!-- Columna Derecha: Tarjetas de Servicios -->
                 <div class="hero-column right">
-                    <!-- Esta columna está vacía para permitir que el video de fondo se vea claramente, manteniendo la distribución equitativa (mismo tamaño) -->
-                </div>
-            </div>
-        </section>
-
-        <section id="servicios" class="services-section">
-            <div class="services-layout">
-                <!-- Columna Izquierda: Lista de servicios (scrollable) -->
-                <div class="services-list">
-                    <!-- Servicio 1 -->
-                    <div class="service-item">
-                        <img src="media/pathfinder.jpg" alt="Pathfinder" class="service-img">
-                        <div class="service-content">
-                            <h3>Topografía Digital y Seguimiento de Avance de Obra fotovoltaica</h3>
-                            <!-- <button class="btn-yellow btn-small" onclick="openModal('modal-pathfinder')">Ver
-                                más</button> -->
+                    <div class="hero-services">
+                        <!-- Servicio 1 -->
+                        <div class="hero-service-item">
+                            <img src="media/pathfinder.jpg" alt="Pathfinder" class="hero-service-img">
+                            <div class="hero-service-content">
+                                <h3>Topografía Digital y Seguimiento de Avance de Obra fotovoltaica</h3>
+                                <button class="btn-yellow btn-small" onclick="openModal('modal-pathfinder')">Ver
+                                    más</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Servicio 2 -->
-                    <div class="service-item">
-                        <img src="media/thermoscope.png" alt="Thermoscope" class="service-img">
-                        <div class="service-content">
-                            <h3>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h3>
-                            <button class="btn-yellow btn-small" ">Ver
-                                más</button>
-                                <!-- onclick=" openModal('modal-thermoscope') -->
+                        <!-- Servicio 2 -->
+                        <div class="hero-service-item">
+                            <img src="media/thermoscope.png" alt="Thermoscope" class="hero-service-img">
+                            <div class="hero-service-content">
+                                <h3>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h3>
+                                <button class="btn-yellow btn-small" onclick="openModal('modal-thermoscope')">Ver
+                                    más</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Servicio 3 -->
-                    <div class="service-item">
-                        <img src="media/sentinel.png" alt="Sentinel" class="service-img">
-                        <div class="service-content">
-                            <h3>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h3>
-                            <button class="btn-yellow btn-small">Ver más</button>
-                            <!-- onclick="openModal('modal-sentinel')" -->
+                        <!-- Servicio 3 -->
+                        <div class="hero-service-item">
+                            <img src="media/sentinel.png" alt="Sentinel" class="hero-service-img">
+                            <div class="hero-service-content">
+                                <h3>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h3>
+                                <button class="btn-yellow btn-small" onclick="openModal('modal-sentinel')">Ver
+                                    más</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Columna Derecha: Sticky con Logo y texto -->
-                <div class="services-sidebar">
-                    <div class="sidebar-content">
-                        <img src="media/logo-nav.png" alt="Ex-view Logo" class="sidebar-logo">
-                        <p>Liderando una revolución que redefine el futuro de la industria solar</p>
                     </div>
                 </div>
             </div>
@@ -123,7 +127,7 @@
             <div class="tech-container">
                 <!-- Columna Izquierda (25% en desktop) -->
                 <div class="tech-text">
-                    <h2>Eficiencia Respaldada por Tecnología Avanzada</h2>
+                    <h2>Eficiencia respaldada por tecnología avanzada</h2>
                     <p>Cada funcionalidad está diseñada para mejorar la gestión de activos solares: diagnóstico
                         automático, alertas tempranas y reportes precisos que garantizan decisiones informadas.</p>
                 </div>
@@ -389,16 +393,20 @@
             <section id="experiencia" class="experiencia-section">
                 <div class="experiencia-container">
                     <div class="exp-btn-container">
-                        <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn-outline-white">Agendar Demo</a>
+                        <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
+                            target="_blank" rel="noopener noreferrer" class="btn-outline-white">Agendar Demo</a>
                     </div>
-                    
+
                     <div class="exp-intro">
                         <div class="exp-graphic">
                             <img src="media/experiencia.png" alt="+15 años de experiencia">
                         </div>
                         <div class="exp-text">
                             <h2>Una suscripción integral<br>con valor fijo mensual</h2>
-                            <p>EX-VIEW Solar ofrece un modelo de suscripción escalable donde nuestros clientes obtienen <strong>ahorros de hasta a un 50%</strong> en comparación con soluciones tradicionales basada en MW, licencias, costos variables o servicios fragmentados</p>
+                            <p>EX-VIEW Solar ofrece un modelo de suscripción escalable donde nuestros clientes obtienen
+                                <strong>ahorros de hasta a un 50%</strong> en comparación con soluciones tradicionales
+                                basada en MW, licencias, costos variables o servicios fragmentados
+                            </p>
                         </div>
                     </div>
 
@@ -500,7 +508,8 @@
 
             <!-- Botón de Contacto -->
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#site-footer" class="btn-yellow"
+                <a href="https://outlook.office.com/bookwithme/?anonymous&ismsaljsauthenabled" target="_blank"
+                    rel="noopener noreferrer" class="btn-yellow"
                     style="display: inline-block; padding: 12px 30px; font-size: 1.1rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Contáctanos</a>
             </div>
         </section>
@@ -1036,11 +1045,36 @@
                         </div>
                     </div>
                     <div class="modal-right">
-                        <h2>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h2>
+                        <h2><span style="color: var(--secondary-color);">EX-VIEW SOLAR</span> - THERMOSCOPE</h2>
                         <div class="modal-text">
-                            <p>Detalle sobre el servicio de captura y termografía. Describe aquí las principales
-                                ventajas, metodologías de trabajo o beneficios técnicos y comerciales para la
-                                instalación solar y su operación.</p>
+                            <p>El servicio que les presentamos se refiere al sistema del análisis y certificación
+                                termográfica de plantas fotovoltaicas. THERMOSCOPE realiza la planeación de las capturas
+                                y el procesamiento digital de la información para obtener el diagnóstico integral y
+                                certificado por termógrafos Nivel I y II. Los resultados son gestionados en el módulo
+                                CMMS de la solución, permitiendo una administración del mantenimiento unificada.</p>
+                            <p>La solución THERMOSCOPE incluye las siguientes características:</p>
+                            <ul>
+                                <li>Planeación y Captura sistematizada y coordinada con nuestros clientes para
+                                    atenderlos a nivel nacional en cualquiera de las instalaciones fotovoltaicas, con
+                                    equipos y pilotos certificados para normativa RAC-100. Se realizan capturas con
+                                    sensores RGB e Infra-rojos.</li>
+                                <li>Procesamiento de Información con Generación de Ortofotos RGB/IR y Modelo 3D de las
+                                    instalaciones Fotovoltaicas. Se hacen las correcciones y alineación de datos
+                                    térmicos y planos DWG.</li>
+                                <li>Adicionalmente se hace el filtrado y categorización de las anomalías y las
+                                    correlaciones con posibles fuentes de problemas y generando órdenes de mantenimiento
+                                    semi-automatizadas.</li>
+                                <li>Se produce el Reporte Detallado y Certificado de Termografía. Se incluyen los
+                                    reportes de calibración de equipos y los indicadores de gestión por proyecto.</li>
+                                <li>Se producen las recomendaciones de mantenimiento acorde con la clasificación y
+                                    severidad de las anomalías. Las Ordenes de Mantenimiento son Pre-llenadas en el
+                                    sistema CMMS de la solución, lo cual supone un ahorro de más del 30% en la gestión
+                                    de O&M.</li>
+                                <li>Se proporcionan modelos multi-temporales para analizar la evolución y mejora de las
+                                    instalaciones fotovoltaicas acordes con los mantenimientos gestionados.</li>
+                                <li>Se provee un Centro de Soporte Termográfico para atender requerimientos específicos
+                                    y adiciones o reprogramaciones de capturas termográficas.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1057,13 +1091,35 @@
                         </div>
                     </div>
                     <div class="modal-right">
-                        <h2>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h2>
+                        <h2><span style="color: var(--secondary-color);">EX-VIEW SOLAR</span> - SENTINEL</h2>
                         <div class="modal-text">
-                            <p>Toda la información referente a la monitorización continua, el análisis de
-                                alertas
-                                tempranas, visualización de datos y cómo Sentinel previene fallos mayores en la
-                                planta
-                                solar aumentando el rendimiento operativo.</p>
+                            <p>El servicio que les presentamos se refiere al sistema del análisis del rendimiento de
+                                plantas fotovoltaicas. SENTINEL ejecuta diagnósticos en tiempo real de Inversores,
+                                Strings, STS y Trackers, proporcionando actualizaciones constantes de los datos en el
+                                sistema cada 5 minutos, y presentándolos en una sola vista gerencial de gestión.</p>
+                            <p>La solución SENTINEL incluye las siguientes características:</p>
+                            <ul>
+                                <li>Analiza el rendimiento del sistema fotovoltaico en términos de producción a nivel de
+                                    inversor, string, combiner box, STS y Trackers a lo largo del tiempo (kWh/kWp),
+                                    nivel de irradiancia y disponibilidad técnica (%).</li>
+                                <li>El índice de rendimiento (PR) y el índice de disponibilidad (AR) se calculan para el
+                                    análisis de la producción de energía en comparación con el promedio histórico.</li>
+                                <li>Adicionalmente se incluye el cálculo del Índice de Rendimiento Energético (EPI y
+                                    PPI), y Disponibilidad en los contratos EPC & O&M.</li>
+                                <li>Se crea un modelo digital del parque fotovoltaico para el análisis avanzado del
+                                    rendimiento, y se suministran los API’s requeridos para integración de los datos en
+                                    herramientas de Reportes Inteligentes.</li>
+                                <li>Se detectan y clasifican las anomalías en función de los datos de instalación
+                                    disponibles y se categorizan las pérdidas de energía.</li>
+                                <li>Se proporcionan alertas sobre problemas críticos y cualquier anomalía o caída de
+                                    rendimiento.</li>
+                                <li>Se provee un CMMS integrado en la solución, para gestionar en tiempo real el
+                                    mantenimiento. Gestiona los equipos o contratistas en sitio obteniendo una gestión
+                                    diaria del mantenimiento de los activos solares de la empresa.</li>
+                                <li>El impacto de las pérdidas de rendimiento se indica con base en los resultados de la
+                                    inspección térmica y se analiza en el mediano y largo plazo con base en el Año
+                                    Meteorológico Típico (TMY).</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
