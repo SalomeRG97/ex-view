@@ -375,4 +375,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Control del video separador: mostrar min 1 y reproducir desde 0
+    const separatorVideo = document.getElementById('separator-video');
+    if (separatorVideo) {
+        let hasPlayed = false;
+        separatorVideo.addEventListener('play', () => {
+            if (!hasPlayed) {
+                hasPlayed = true;
+                separatorVideo.currentTime = 0;
+            }
+        });
+    }
+
 });

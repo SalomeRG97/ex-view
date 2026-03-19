@@ -1418,6 +1418,88 @@ nav a.btn-demo {
     margin-bottom: 1.2rem;
 }
 
+.modal-video-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
+
+.modal-video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-intro {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    line-height: 1.7;
+    margin-bottom: 2rem !important;
+    text-align: justify;
+}
+
+.modal-subtitle {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem !important;
+    font-size: 1.1rem;
+}
+
+.modal-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-feature-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: var(--secondary-color);
+}
+
+.step-num {
+    flex: 0 0 35px;
+    height: 35px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(250, 204, 21, 0.4);
+}
+
+.step-text {
+    flex: 1;
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.step-text strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
 /* Scrollbars personalizadas para modal */
 .modal-left::-webkit-scrollbar,
 .modal-right::-webkit-scrollbar {

@@ -60,11 +60,12 @@
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            No por cantidad de usuarios, ni por restricciones en funcionalidad.
+                            No hay costos ocultos por cantidad de usuarios, ni por restricciones en funcionalidad.
                         </li>
                     </ul>
 
-                    <a href="#site-footer" class="btn-primary">Contáctanos</a>
+                    <a href="https://api.whatsapp.com/send/?phone=573022234303&text&type=phone_number&app_absent=0"
+                        class="btn-primary" target="_blank">Contáctanos</a>
                 </div>
 
                 <!-- Columna Derecha: Espacio para mostrar el video de fondo -->
@@ -92,9 +93,8 @@
                         <img src="media/thermoscope.png" alt="Thermoscope" class="service-img">
                         <div class="service-content">
                             <h3>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h3>
-                            <button class="btn-yellow btn-small" ">Ver
+                            <button class="btn-yellow btn-small" onclick="openModal('modal-thermoscope')">Ver
                                 más</button>
-                                <!-- onclick=" openModal('modal-thermoscope') -->
                         </div>
                     </div>
                     <!-- Servicio 3 -->
@@ -102,8 +102,7 @@
                         <img src="media/sentinel.png" alt="Sentinel" class="service-img">
                         <div class="service-content">
                             <h3>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h3>
-                            <button class="btn-yellow btn-small">Ver más</button>
-                            <!-- onclick="openModal('modal-sentinel')" -->
+                            <button class="btn-yellow btn-small" onclick="openModal('modal-sentinel')">Ver más</button>
                         </div>
                     </div>
                 </div>
@@ -273,20 +272,15 @@
             <!-- Segunda Parte: Sentinel -->
             <div class="product-block">
                 <!-- Zona superior: Imagen/Texto y Video -->
-                <!-- <div class="product-intro">
+                <div class="product-intro">
                     <div class="product-info">
                         <img src="media/sentinel.png" alt="Sentinel" class="product-logo-img">
                         <p class="product-description">
-                            Integra la <strong>captura de datos con drones</strong> y equipos eléctricos con
-                            <strong>procesamiento avanzado de
-                                inteligencia artificial</strong> para identificar anomalías, fallos y sus causas. La
-                            solución
-                            automatiza las <strong>inspecciones termográficas</strong> y entrega <strong>reportes
-                                certificados y
-                                tableros
-                                gerenciales</strong> claros, permitiendo optimizar el <strong>mantenimiento y certificar
-                                el estado de la
-                                planta</strong> fotovoltaica con agilidad y total confianza.
+                            Integra la data de cualquier SCADA y Logger, centralizando portafolios de activos, sin
+                            necesidad de hardware con un mínimo impacto en el OPEX e integrando alarmas y eventos a un
+                            CMMS para una gestión técnica del portafolio de activos fotovoltaicos eficiente y
+                            profesional. De esta forma, Inversores, Strings, STS, Trackers son gestionados en UNA sola
+                            Plataforma en forma unificada e integral
                         </p>
                     </div>
                     <div class="product-video">
@@ -295,7 +289,7 @@
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Zona inferior: Funcionalidades (4 columnas) -->
                 <h3 class="features-title">Sentinel funcionalidades</h3>
@@ -378,8 +372,8 @@
             <div class="video-bg-split">
                 <section class="video-separator">
                     <div class="video-container">
-                        <video controls playsinline>
-                            <source src="media/exviewsolar.mp4" type="video/mp4">
+                        <video id="separator-video" controls playsinline preload="metadata">
+                            <source src="media/exviewsolar.mp4#t=7" type="video/mp4">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                     </div>
@@ -389,16 +383,20 @@
             <section id="experiencia" class="experiencia-section">
                 <div class="experiencia-container">
                     <div class="exp-btn-container">
-                        <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener noreferrer" class="btn-outline-white">Agendar Demo</a>
+                        <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
+                            target="_blank" rel="noopener noreferrer" class="btn-outline-white">Agendar Demo</a>
                     </div>
-                    
+
                     <div class="exp-intro">
                         <div class="exp-graphic">
                             <img src="media/experiencia.png" alt="+15 años de experiencia">
                         </div>
                         <div class="exp-text">
                             <h2>Una suscripción integral<br>con valor fijo mensual</h2>
-                            <p>EX-VIEW Solar ofrece un modelo de suscripción escalable donde nuestros clientes obtienen <strong>ahorros de hasta a un 50%</strong> en comparación con soluciones tradicionales basada en MW, licencias, costos variables o servicios fragmentados</p>
+                            <p>EX-VIEW Solar ofrece un modelo de suscripción escalable donde nuestros clientes obtienen
+                                <strong>ahorros de hasta a un 50%</strong> en comparación con soluciones tradicionales
+                                basada en MW, licencias, costos variables o servicios fragmentados
+                            </p>
                         </div>
                     </div>
 
@@ -500,7 +498,8 @@
 
             <!-- Botón de Contacto -->
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#site-footer" class="btn-yellow"
+                <a href="https://api.whatsapp.com/send/?phone=573022234303&text&type=phone_number&app_absent=0"
+                    class="btn-yellow" target="_blank"
                     style="display: inline-block; padding: 12px 30px; font-size: 1.1rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Contáctanos</a>
             </div>
         </section>
@@ -1031,16 +1030,72 @@
                 <span class="close-btn" onclick="closeModal('modal-thermoscope')">&times;</span>
                 <div class="modal-body">
                     <div class="modal-left">
-                        <div class="modal-images">
-                            <img src="media/thermoscope.png" alt="Thermoscope Imagen">
+                        <div class="modal-video-container">
+                            <video autoplay loop muted playsinline>
+                                <source src="media/thermoscope.mp4" type="video/mp4">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
                         </div>
                     </div>
                     <div class="modal-right">
-                        <h2>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h2>
+                        <h2>Análisis y Certificación Termográfica</h2>
                         <div class="modal-text">
-                            <p>Detalle sobre el servicio de captura y termografía. Describe aquí las principales
-                                ventajas, metodologías de trabajo o beneficios técnicos y comerciales para la
-                                instalación solar y su operación.</p>
+                            <p class="modal-intro">El servicio que les presentamos se refiere al sistema del análisis y
+                                certificación termográfica de plantas fotovoltaicas. <strong>THERMOSCOPE</strong>
+                                realiza la planeación de las capturas y el procesamiento digital de la información para
+                                obtener el diagnóstico integral y certificado por termógrafos Nivel I y II. Los
+                                resultados son gestionados en el módulo CMMS de la solución, permitiendo una
+                                administración del mantenimiento unificada.</p>
+
+                            <p class="modal-subtitle">La solución <strong>THERMOSCOPE</strong> incluye las siguientes
+                                características:</p>
+
+                            <ul class="modal-feature-list">
+                                <li>
+                                    <span class="step-num">1</span>
+                                    <div class="step-text"><strong>Planeación y Captura:</strong> Sistematizada y
+                                        coordinada con nuestros clientes para atenderlos a nivel nacional en cualquiera
+                                        de las instalaciones fotovoltaicas, con equipos y pilotos certificados para
+                                        normativa RAC-100. Se realizan capturas con sensores RGB e Infra-rojos.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">2</span>
+                                    <div class="step-text"><strong>Procesamiento de Información:</strong> Con Generación
+                                        de Ortofotos RGB/IR y Modelo 3D de las instalaciones Fotovoltaicas. Se hacen las
+                                        correcciones y alineación de datos térmicos y planos DWG.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">3</span>
+                                    <div class="step-text"><strong>Filtrado Funcional:</strong> Se hace el filtrado y
+                                        categorización de las anomalías y las correlaciones con posibles fuentes de
+                                        problemas y generando órdenes de mantenimiento semi-automatizadas.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">4</span>
+                                    <div class="step-text"><strong>Reporte Detallado:</strong> Se produce el Reporte
+                                        Detallado y Certificado de Termografía. Se incluyen los reportes de calibración
+                                        de equipos y los indicadores de gestión por proyecto.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">5</span>
+                                    <div class="step-text"><strong>Gestión Eficiente:</strong> Se producen las
+                                        recomendaciones de mantenimiento acorde con la clasificación y severidad de las
+                                        anomalías. Las Ordenes de Mantenimiento son Pre-llenadas en el sistema CMMS, lo
+                                        cual supone un ahorro de más del 30% en la gestión de O&M.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">6</span>
+                                    <div class="step-text"><strong>Modelos Avanzados:</strong> Se proporcionan modelos
+                                        multi-temporales para analizar la evolución y mejora de las instalaciones
+                                        fotovoltaicas acordes con los mantenimientos gestionados.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">7</span>
+                                    <div class="step-text"><strong>Soporte Continuo:</strong> Se provee un Centro de
+                                        Soporte Termográfico para atender requerimientos específicos y adiciones o
+                                        reprogramaciones de capturas termográficas.</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1052,18 +1107,79 @@
                 <span class="close-btn" onclick="closeModal('modal-sentinel')">&times;</span>
                 <div class="modal-body">
                     <div class="modal-left">
-                        <div class="modal-images">
-                            <img src="media/sentinel.png" alt="Sentinel Imagen">
+                        <div class="modal-video-container">
+                            <video autoplay loop muted playsinline>
+                                <source src="media/sentinel.mp4" type="video/mp4">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
                         </div>
                     </div>
                     <div class="modal-right">
-                        <h2>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h2>
+                        <h2>Monitoreo Avanzado de Rendimiento</h2>
                         <div class="modal-text">
-                            <p>Toda la información referente a la monitorización continua, el análisis de
-                                alertas
-                                tempranas, visualización de datos y cómo Sentinel previene fallos mayores en la
-                                planta
-                                solar aumentando el rendimiento operativo.</p>
+                            <p class="modal-intro">El servicio que les presentamos se refiere al sistema del análisis
+                                del rendimiento de plantas fotovoltaicas. <strong>SENTINEL</strong> ejecuta diagnósticos
+                                en tiempo real de Inversores, Strings, STS y Trackers, proporcionando actualizaciones
+                                constantes de los datos en el sistema cada 5 minutos, y presentándolos en una sola vista
+                                gerencial de gestión.</p>
+
+                            <p class="modal-subtitle">La solución <strong>SENTINEL</strong> incluye las siguientes
+                                características:</p>
+
+                            <ul class="modal-feature-list">
+                                <li>
+                                    <span class="step-num">1</span>
+                                    <div class="step-text"><strong>Análisis de Rendimiento:</strong> Analiza el
+                                        rendimiento del sistema fotovoltaico en términos de producción a nivel de
+                                        inversor, string, combiner box, STS y Trackers a lo largo del tiempo (kWh/kWp),
+                                        nivel de irradiancia y disponibilidad técnica (%).</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">2</span>
+                                    <div class="step-text"><strong>Índices Clave:</strong> El índice de rendimiento (PR)
+                                        y el índice de disponibilidad (AR) se calculan para el análisis de la producción
+                                        de energía en comparación con el promedio histórico.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">3</span>
+                                    <div class="step-text"><strong>Eficiencia Energética:</strong> Adicionalmente se
+                                        incluye el cálculo del Índice de Rendimiento Energético (EPI y PPI), y
+                                        Disponibilidad en los contratos EPC & O&M.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">4</span>
+                                    <div class="step-text"><strong>Modelo Digital (Gemelo):</strong> Se crea un modelo
+                                        digital del parque fotovoltaico para el análisis avanzado del rendimiento, y se
+                                        suministran los API’s requeridos para integración de los datos en herramientas
+                                        de Reportes Inteligentes.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">5</span>
+                                    <div class="step-text"><strong>Detección de Anomalías:</strong> Se detectan y
+                                        clasifican las anomalías en función de los datos de instalación disponibles y se
+                                        categorizan las pérdidas de energía.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">6</span>
+                                    <div class="step-text"><strong>Alertas Inteligentes:</strong> Se proporcionan
+                                        alertas sobre problemas críticos y cualquier anomalía o caída de rendimiento.
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="step-num">7</span>
+                                    <div class="step-text"><strong>Gestión In-Situ:</strong> Se provee un CMMS integrado
+                                        en la solución, para gestionar en tiempo real el mantenimiento. Gestiona los
+                                        equipos o contratistas en sitio obteniendo una gestión diaria del mantenimiento
+                                        de los activos solares de la empresa.</div>
+                                </li>
+                                <li>
+                                    <span class="step-num">8</span>
+                                    <div class="step-text"><strong>Manejo del Impacto:</strong> El impacto de las
+                                        pérdidas de rendimiento se indica con base en los resultados de la inspección
+                                        térmica y se analiza en el mediano y largo plazo con base en el Año
+                                        Meteorológico Típico (TMY).</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
