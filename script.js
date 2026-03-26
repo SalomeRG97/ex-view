@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+const initWebsite = () => {
 
     // Smooth scrolling for navigation links and buttons
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -88,13 +88,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Accordion Logic for Eligen Cards (¿Por qué elegirnos?)
+    document.querySelectorAll('.btn-expandir').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const card = this.closest('.eligen-card');
+            const textSpan = this.querySelector('.btn-text');
+            
+            card.classList.toggle('expanded');
+            
+            if (card.classList.contains('expanded')) {
+                textSpan.textContent = 'Mostrar menos';
+            } else {
+                textSpan.textContent = 'Leer más';
+            }
+        });
+    });
+
     // Carousel Control General (Soporte para múltiples carruseles)
     const carouselWrappers = document.querySelectorAll('.tech-carousel-wrapper, .funcional-carousel-wrapper');
     carouselWrappers.forEach(wrapper => {
         const track = wrapper.querySelector('.carousel-track');
         if (!track) return;
-        
-        const originalSlides = Array.from(track.children);
+
+        // WP FIX: Utilizar querySelectorAll('.carousel-slide') en lugar de .children para evadir etiquetas <p> o <br> de WordPress
+        const originalSlides = Array.from(track.querySelectorAll('.carousel-slide'));
+        if (originalSlides.length === 0) return;
         const originalLength = originalSlides.length;
 
         // Clone slides to create infinite loop effect
@@ -112,16 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Prevent drag on original images
         originalSlides.forEach(slide => {
             const img = slide.querySelector('img');
-            if(img) img.addEventListener('dragstart', (e) => e.preventDefault());
+            if (img) img.addEventListener('dragstart', (e) => e.preventDefault());
         });
 
-        const slides = Array.from(track.children);
-        const totalSlides = slides.length; 
-        
+        const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+        const totalSlides = slides.length;
+
         const nextButton = wrapper.querySelector('.next-btn');
         const prevButton = wrapper.querySelector('.prev-btn');
         const indicatorsContainer = wrapper.querySelector('.carousel-indicators');
-        
+
         let currentIndex = 0;
         let isTransitioning = false;
         let autoPlayInterval;
@@ -163,6 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const goToSlide = (index, smooth = true) => {
             if (smooth) {
                 track.style.transition = 'transform 0.5s ease-in-out';
+                isTransitioning = true;
+                setTimeout(() => { isTransitioning = false; }, 550); // Fallback de seguridad
             } else {
                 track.style.transition = 'none';
             }
@@ -173,17 +194,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const moveNext = () => {
             if (isTransitioning) return;
-            isTransitioning = true;
             currentIndex++;
             goToSlide(currentIndex, true);
         };
 
         const movePrev = () => {
             if (isTransitioning) return;
-            isTransitioning = true;
             if (currentIndex <= 0) {
                 goToSlide(originalLength, false);
-                void track.offsetWidth; 
+                void track.offsetWidth;
                 currentIndex = originalLength - 1;
                 goToSlide(currentIndex, true);
             } else {
@@ -200,8 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        if(nextButton) nextButton.addEventListener('click', () => { moveNext(); startAutoPlay(); });
-        if(prevButton) prevButton.addEventListener('click', () => { movePrev(); startAutoPlay(); });
+        if (nextButton) nextButton.addEventListener('click', () => { moveNext(); startAutoPlay(); });
+        if (prevButton) prevButton.addEventListener('click', () => { movePrev(); startAutoPlay(); });
 
         const startAutoPlay = () => {
             clearInterval(autoPlayInterval);
@@ -226,11 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const touchStart = (event) => {
-            if (isTransitioning) return; 
+            if (isTransitioning) return;
             if (event.type.includes('mouse')) {
-                event.preventDefault(); 
+                event.preventDefault();
             }
-            
+
             if (currentIndex === 0) {
                 goToSlide(originalLength, false);
                 currentIndex = originalLength;
@@ -240,11 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
             startPos = getPositionX(event);
             prevTranslate = -getTransformAmount(currentIndex);
             currentTranslate = prevTranslate;
-            
-            track.style.transition = 'none'; 
+
+            track.style.transition = 'none';
             track.classList.add('grabbing');
             clearInterval(autoPlayInterval);
-            
+
             animationID = requestAnimationFrame(animation);
         };
 
@@ -259,21 +278,16 @@ document.addEventListener('DOMContentLoaded', () => {
             isDragging = false;
             cancelAnimationFrame(animationID);
             track.classList.remove('grabbing');
-            
+
             const movedBy = currentTranslate - prevTranslate;
-            
-            // Re-habilitamos la transición ANTES de llamar goToSlide
-            track.style.transition = 'transform 0.5s ease-in-out';
 
             if (movedBy < -50) {
-                isTransitioning = true;
                 currentIndex++;
                 goToSlide(currentIndex, true);
             } else if (movedBy > 50) {
-                isTransitioning = true;
                 currentIndex--;
                 goToSlide(currentIndex, true);
-             } else {
+            } else {
                 goToSlide(currentIndex, true);
             }
             startAutoPlay();
@@ -286,15 +300,15 @@ document.addEventListener('DOMContentLoaded', () => {
         track.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
         track.addEventListener('mouseleave', () => {
             if (!isDragging) startAutoPlay();
-            else touchEnd(); 
+            else touchEnd();
         });
 
         track.addEventListener('mousedown', touchStart);
         track.addEventListener('mousemove', touchMove);
         track.addEventListener('mouseup', touchEnd);
 
-        track.addEventListener('touchstart', touchStart, {passive: true});
-        track.addEventListener('touchmove', touchMove, {passive: true});
+        track.addEventListener('touchstart', touchStart, { passive: true });
+        track.addEventListener('touchmove', touchMove, { passive: true });
         track.addEventListener('touchend', touchEnd);
     });
 
@@ -350,9 +364,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const x = e.pageX - marquee.offsetLeft;
             // Reducir la velocidad de arrastre a 1 (antes 2) para que no sea tan brusco
-            const walk = (x - startX) * 1; 
+            const walk = (x - startX) * 1;
             marquee.scrollLeft = scrollLeft - walk;
-            
+
             // Si arrastramos más allá de la mitad, damos la vuelta
             if (marquee.scrollLeft >= (marquee.scrollWidth / 2)) {
                 marquee.scrollLeft = 1; // Para que no pase a cero exacto durante arrastre negativo
@@ -369,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
         marquee.addEventListener('touchstart', () => {
             cancelAnimationFrame(marqueeAnimationId);
         }, { passive: true });
-        
+
         marquee.addEventListener('touchend', () => {
             autoScroll();
         });
@@ -387,4 +401,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+};
+
+// WP FIX: Ejecutar directamente si el DOM ya cargó (útil cuando WordPress carga los scripts async en el footer)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWebsite);
+} else {
+    initWebsite();
+}
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });

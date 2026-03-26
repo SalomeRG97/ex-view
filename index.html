@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex-view Solar</title>
-    <link rel="stylesheet" href="styles.css?v=18">
-    <script src="script.js?v=8" defer></script>
+    <link rel="stylesheet" href="styles.css?v=19">
+    <script src="script.js?v=9" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
@@ -18,11 +18,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="https://ex-view.com/empleos/" target="_blank">Trabaja con nosotros</a></li>
-                <li><a href="https://ex-view.com/empleos/" target="_blank">Sostenibilidad</a></li>
+                <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
                 <li><a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
                         class="btn-demo" target="_blank">Agendar demo</a></li>
-                <li><a href="https://d48p9darmym8b.cloudfront.net" target="_blank">Login</a></li>
+                <li><a href="https://d48p9darmym8b.cloudfront.net" class="btn-nav-login" target="_blank">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -64,56 +64,51 @@
                         </li>
                     </ul>
 
-                    <a href="https://api.whatsapp.com/send/?phone=573022234303&text&type=phone_number&app_absent=0"
+                    <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
                         class="btn-primary" target="_blank">Contáctanos</a>
                 </div>
 
-                <!-- Columna Derecha: Espacio para mostrar el video de fondo -->
+                <!-- Columna Derecha: Texto añadido -->
                 <div class="hero-column right">
-                    <!-- Esta columna está vacía para permitir que el video de fondo se vea claramente, manteniendo la distribución equitativa (mismo tamaño) -->
+                    <p class="hero-right-line">Avance Seguro.</p>
+                    <p class="hero-right-line">Monitoreo Permanente.</p>
+                    <p class="hero-right-line">Termografías Inteligentes.</p>
+                    <p class="hero-right-highlight">Una Solución</p>
                 </div>
             </div>
         </section>
 
-        <section id="servicios" class="services-section">
-            <div class="services-layout">
-                <!-- Columna Izquierda: Lista de servicios (scrollable) -->
-                <div class="services-list">
-                    <!-- Servicio 1 -->
-                    <div class="service-item">
-                        <img src="media/pathfinder.jpg" alt="Pathfinder" class="service-img">
-                        <div class="service-content">
-                            <h3>Topografía Digital y Seguimiento de Avance de Obra fotovoltaica</h3>
-                            <!-- <button class="btn-yellow btn-small" onclick="openModal('modal-pathfinder')">Ver
-                                más</button> -->
-                        </div>
-                    </div>
-                    <!-- Servicio 2 -->
-                    <div class="service-item">
-                        <img src="media/thermoscope.png" alt="Thermoscope" class="service-img">
-                        <div class="service-content">
-                            <h3>Captura, Digitalización y Termografía de la Instalación fotovoltaica</h3>
-                            <button class="btn-yellow btn-small" onclick="openModal('modal-thermoscope')">Ver
-                                más</button>
-                        </div>
-                    </div>
-                    <!-- Servicio 3 -->
-                    <div class="service-item">
-                        <img src="media/sentinel.png" alt="Sentinel" class="service-img">
-                        <div class="service-content">
-                            <h3>Monitoreo en Tiempo Real del Estado de la Instalación fotovoltaica</h3>
-                            <button class="btn-yellow btn-small" onclick="openModal('modal-sentinel')">Ver más</button>
-                        </div>
-                    </div>
-                </div>
+        <!-- Servicios -->
+        <section id="servicios" class="new-services-section">
+            <div class="ns-header">
+                <img src="media/logo-nav.png" alt="Ex-View Logo" class="ns-logo">
+                <h2 class="ns-title">Liderando una revolución que redefine el futuro de la industria solar</h2>
+            </div>
 
-                <!-- Columna Derecha: Sticky con Logo y texto -->
-                <div class="services-sidebar">
-                    <div class="sidebar-content">
-                        <img src="media/logo-nav.png" alt="Ex-view Logo" class="sidebar-logo">
-                        <p>Liderando una revolución que redefine el futuro de la industria solar</p>
+            <div class="ns-grid">
+                <!-- Servicio 1 -->
+                <a href="pathfinder.html" class="ns-card" target="_blank">
+                    <div class="ns-img-wrapper">
+                        <img src="media/pcpathfinder.png" alt="Pathfinder" class="ns-img">
                     </div>
-                </div>
+                    <span class="ns-card-title">Pathfinder</span>
+                </a>
+
+                <!-- Servicio 2 -->
+                <a href="thermoscope.html" class="ns-card" target="_blank">
+                    <div class="ns-img-wrapper">
+                        <img src="media/pcthermoscope.png" alt="Thermoscope" class="ns-img">
+                    </div>
+                    <span class="ns-card-title">Thermoscope</span>
+                </a>
+
+                <!-- Servicio 3 -->
+                <a href="sentinel.html" class="ns-card" target="_blank">
+                    <div class="ns-img-wrapper">
+                        <img src="media/pcsentinel.png" alt="Sentinel" class="ns-img">
+                    </div>
+                    <span class="ns-card-title">Sentinel</span>
+                </a>
             </div>
         </section>
 
@@ -122,52 +117,33 @@
             <div class="tech-container">
                 <!-- Columna Izquierda (25% en desktop) -->
                 <div class="tech-text">
-                    <h2>Eficiencia Respaldada por Tecnología Avanzada</h2>
+                    <h2 class="tech-title">Eficiencia respaldada por tecnología avanzada</h2>
                     <p>Cada funcionalidad está diseñada para mejorar la gestión de activos solares: diagnóstico
                         automático, alertas tempranas y reportes precisos que garantizan decisiones informadas.</p>
                 </div>
 
                 <!-- Columna Derecha (75% en desktop) - Carrusel -->
                 <div class="tech-carousel-wrapper">
-                    <!-- Nuevo wrapper interno para ocultar el scroll de las imágenes sin recortar los botones flotantes -->
+                    <!-- Nuevo wrapper interno para ocultar el scroll de las imágenes -->
                     <div class="carousel-viewport">
                         <div class="carousel-container" id="tech-carousel">
                             <div class="carousel-track">
-                                <!-- Las imágenes se pueden agregar o cambiar aquí -->
-                                <div class="carousel-slide">
-                                    <img src="media/2-carousel.jpg" alt="Tecnología 2">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/3-carousel.jpg" alt="Tecnología 3">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/4-carousel.jpg" alt="Tecnología 4">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/5-carousel.jpg" alt="Tecnología 5">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/6-carousel.jpg" alt="Tecnología 6">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/7-carousel.jpg" alt="Tecnología 6">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/8-carousel.jpg" alt="Tecnología 6">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/9-carousel.jpg" alt="Tecnología 6">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="media/10-carousel.jpg" alt="Tecnología 6">
-                                </div>
+                                <div class="carousel-slide"><img src="media/2-carousel.jpg" alt="Tecnología 2"></div>
+                                <div class="carousel-slide"><img src="media/3-carousel.jpg" alt="Tecnología 3"></div>
+                                <div class="carousel-slide"><img src="media/4-carousel.jpg" alt="Tecnología 4"></div>
+                                <div class="carousel-slide"><img src="media/5-carousel.jpg" alt="Tecnología 5"></div>
+                                <div class="carousel-slide"><img src="media/6-carousel.jpg" alt="Tecnología 6"></div>
+                                <div class="carousel-slide"><img src="media/7-carousel.jpg" alt="Tecnología 7"></div>
+                                <div class="carousel-slide"><img src="media/8-carousel.jpg" alt="Tecnología 8"></div>
+                                <div class="carousel-slide"><img src="media/9-carousel.jpg" alt="Tecnología 9"></div>
+                                <div class="carousel-slide"><img src="media/10-carousel.jpg" alt="Tecnología 10"></div>
                             </div>
                         </div>
                     </div>
                     <!-- Controles del carrusel -->
-                    <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Anterior">&#10094;</button>
-                    <button class="carousel-btn next-btn" id="carousel-next" aria-label="Siguiente">&#10095;</button>
-                    <div class="carousel-indicators" id="carousel-indicators"></div>
+                    <button class="carousel-btn prev-btn" aria-label="Anterior">&#10094;</button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente">&#10095;</button>
+                    <div class="carousel-indicators"></div>
                 </div>
             </div>
         </section>
@@ -206,7 +182,9 @@
                 </div>
 
                 <!-- Zona inferior: Funcionalidades (4 columnas) -->
-                <h3 class="features-title">Thermoscope funcionalidades</h3>
+                <h3 class="features-title">THERMOSCOPE: Visibilidad total para una operación solar más eficiente y
+                    confiable
+                </h3>
                 <div class="product-features">
                     <!-- Feature 1 -->
                     <div class="feature-card">
@@ -268,8 +246,10 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Segunda Parte: Sentinel -->
+        <!-- Segunda Parte: Sentinel -->
+        <section class="product-detail-section sentinel-section">
             <div class="product-block">
                 <!-- Zona superior: Imagen/Texto y Video -->
                 <div class="product-intro">
@@ -292,7 +272,8 @@
                 </div>
 
                 <!-- Zona inferior: Funcionalidades (4 columnas) -->
-                <h3 class="features-title">Sentinel funcionalidades</h3>
+                <h3 class="features-title">SENTINEL: Todos sus activos solares, conectados en tiempo real y bajo control
+                </h3>
                 <div class="product-features">
                     <!-- Feature 1 -->
                     <div class="feature-card">
@@ -498,7 +479,7 @@
 
             <!-- Botón de Contacto -->
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://api.whatsapp.com/send/?phone=573022234303&text&type=phone_number&app_absent=0"
+                <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
                     class="btn-yellow" target="_blank"
                     style="display: inline-block; padding: 12px 30px; font-size: 1.1rem; border-radius: 25px; text-decoration: none; font-weight: 600;">Contáctanos</a>
             </div>
@@ -506,7 +487,7 @@
 
         <!-- Gestión Integrada Section -->
         <section id="gestion-integrada" class="gestion-section"
-            style="background-color: #f8fafc; padding: 1rem 5% 5rem;">
+            style="background-color: #f8fafc; padding: 4rem 5% 5rem;">
             <div class="gestion-header" style="text-align: center; max-width: 900px; margin: 0 auto 4rem auto;">
                 <h2 class="features-title" style="margin-bottom: 1.5rem;">Gestión integrada de activos solares: captura,
                     análisis y optimización</h2>
@@ -518,13 +499,13 @@
             </div>
             <div class="gestion-grid">
                 <div class="gestion-card">
-                    <img src="media/integrada/inspecciona.png" alt="Inspecciona">
+                    <img src="media/integrada/Inspecciona.png" alt="Inspecciona">
                     <h3>Inspecciona</h3>
                     <p>En EX-VIEW Solar puedes integrar los vuelos termográficos dentro de tu suscripción y visualizar
                         tus activos en un gemelo digital accesible desde cualquier lugar del mundo.</p>
                 </div>
                 <div class="gestion-card">
-                    <img src="media/integrada/centralice.png" alt="Centralice">
+                    <img src="media/integrada/Centralice.png" alt="Centralice">
                     <h3>Centralice</h3>
                     <p>Integre datos de inversores, strings, baterias, estaciones meteorológicas en línea y de sitio,
                         PLC, HMI y sistemas SCADA para unificar los datos y análisis de su cartera solar en una única
@@ -728,109 +709,112 @@
             <div class="eligen-header">
                 <h2 class="features-title">¿Por qué las empreas líderes elígen a EX-VIEW?</h2>
             </div>
-            <div class="eligen-zigzag">
+            <div class="eligen-grid">
                 <!-- Item 1 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/suscripcion.png" alt="Suscripción integral">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>Una suscripción integral con valor fijo mensual</h3>
+                    <h3 class="eligen-card-title">Una suscripción integral con valor fijo mensual</h3>
+                    <div class="eligen-card-content">
                         <p>Ahorra hasta un 50 % en análisis termográficos con nuestra solución solar integral.
-                            Tecnología
-                            avanzada y procesos automatizados integrados en una plataforma única sin importar los MWh
-                            que
-                            gestionen en tus parques solares. Una Suscripción de valor fijo mensual para que planifiques
-                            tus
-                            costos sin sorpresas y enfocarse en una gestión efectiva.</p>
+                            Tecnología avanzada y procesos automatizados integrados en una plataforma única sin importar
+                            los MWh que gestionen en tus parques solares. Una Suscripción de valor fijo mensual para que
+                            planifiques tus costos sin sorpresas y enfocarse en una gestión efectiva.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
                 <!-- Item 2 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/garantia.png" alt="Satisfacción y garantías">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>100% satisfacción y garantías a nuestros clientes</h3>
+                    <h3 class="eligen-card-title">100% satisfacción y garantías a nuestros clientes</h3>
+                    <div class="eligen-card-content">
                         <p>En todo lo que hacemos, el cliente es lo primero. Una solución de clase mundial, accesible
-                            para
-                            todos, que entrega análisis de activos fotovoltaicos en tiempo récord y con más del 99 % de
-                            precisión. Con tecnología avanzada y procesos optimizados, te ayudamos a tomar decisiones
-                            rápidas y seguras para maximizar la eficiencia de tu parque solar.</p>
+                            para todos, que entrega análisis de activos fotovoltaicos en tiempo récord y con más del 99
+                            % de precisión. Con tecnología avanzada y procesos optimizados, te ayudamos a tomar
+                            decisiones rápidas y seguras para maximizar la eficiencia de tu parque solar.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
                 <!-- Item 3 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/gestion.png" alt="Gestión centralizada">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>Gestión centralizada para un control total</h3>
+                    <h3 class="eligen-card-title">Gestión centralizada para un control total</h3>
+                    <div class="eligen-card-content">
                         <p>Con nuestra plataforma integrada de captura, monitoreo en tiempo real y procesamiento
                             inteligente, gestionas todas tus inspecciones solares de manera segura, eficiente y desde un
                             solo lugar. En tiempo real y con colaboración activa, acelera las inspecciones, optimiza el
                             mantenimiento y maximiza el rendimiento de tus activos solares.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
                 <!-- Item 4 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/ai.png" alt="Modelado avanzado inteligente">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>Modelado avanzado inteligente para gestionar pérdidas de energía</h3>
+                    <h3 class="eligen-card-title">Modelado avanzado inteligente para gestionar pérdidas de energía</h3>
+                    <div class="eligen-card-content">
                         <p>Utilizamos las últimas tecnologías de inteligencia artificial y modelos probados, respaldados
-                            por
-                            resultados de millones de termografías realizadas en todo el mundo bajo diversas condiciones
-                            climáticas.</p>
+                            por resultados de millones de termografías realizadas en todo el mundo bajo diversas
+                            condiciones climáticas.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
                 <!-- Item 5 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/planeacion.png" alt="Planeación focalizada de mantenimiento">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>Planeación focalizada de mantenimiento</h3>
+                    <h3 class="eligen-card-title">Planeación focalizada de mantenimiento</h3>
+                    <div class="eligen-card-content">
                         <p>Nuestra solución predictiva y módulo propietario de CMMS, se integra con tu gestión experta
-                            para
-                            optimizar el rendimiento, maximizar tu inversión y reducir costos de mantenimiento. Controla
-                            la
-                            gestión de las actividades y pendientes para cada equipo de trabajo y cada orden de
-                            servicio.
-                            Detecta y resuelve rápidamente anomalías térmicas, asegurando el control preciso de las
-                            pérdidas
-                            y la máxima eficiencia energética.</p>
+                            para optimizar el rendimiento, maximizar tu inversión y reducir costos de mantenimiento.
+                            Controla la gestión de las actividades y pendientes para cada equipo de trabajo y cada orden
+                            de servicio. Detecta y resuelve rápidamente anomalías térmicas, asegurando el control
+                            preciso de las pérdidas y la máxima eficiencia energética.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
                 <!-- Item 6 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/gemelos.png" alt="Gemelo digital">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>Gemelo digital de tus activos solares para establecer una línea base completa de gestión
-                        </h3>
+                    <h3 class="eligen-card-title">Gemelo digital de tus activos solares para establecer una línea base
+                        completa de gestión</h3>
+                    <div class="eligen-card-content">
                         <p>Con las inspecciones termográficas periódicas del modelo Ex-View Solar, puedes construir una
                             línea base de rendimiento sólida que te permite analizar y comparar tus activos a lo largo
-                            del
-                            tiempo. Al integrar vuelos de drones directamente en tu suscripción, gestionas tus parques
-                            solares desde un gemelo digital dinámico, accesible en cualquier momento y desde cualquier
-                            lugar
-                            del mundo.</p>
+                            del tiempo. Al integrar vuelos de drones directamente en tu suscripción, gestionas tus
+                            parques solares desde un gemelo digital dinámico, accesible en cualquier momento y desde
+                            cualquier lugar del mundo.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
                 <!-- Item 7 -->
-                <div class="zigzag-item">
-                    <div class="zigzag-icon">
+                <div class="eligen-card">
+                    <div class="eligen-icon">
                         <img src="media/eligen/soporte.png" alt="Soporte para garantías">
                     </div>
-                    <div class="zigzag-text">
-                        <h3>Soporte para garantías y reclamaciones de seguros</h3>
+                    <h3 class="eligen-card-title">Soporte para garantías y reclamaciones de seguros</h3>
+                    <div class="eligen-card-content">
                         <p>Generamos un historial digital sólido para rastrear tasas de fallos en módulos a lo largo del
                             tiempo. El acceso a datos estandarizados y de alta calidad aumenta significativamente las
                             posibilidades de éxito en tus reclamaciones de garantía y seguros.</p>
                     </div>
+                    <button class="btn-expandir"><span class="btn-text">Leer más</span> <span
+                            class="arrow">&#9660;</span></button>
                 </div>
             </div>
             </div>
@@ -930,10 +914,10 @@
             </div>
         </section>
 
-        <!-- Sección "Nos Avalan" -->
+        <!-- Sección "Tecnología y estándares de clase mundial" -->
         <section id="avalan" class="lideres-section" style="padding-top: 0;">
             <div class="lideres-header">
-                <h2 class="main-title">Nos Avalan</h2>
+                <h2 class="main-title">Una solución soportada por tecnología y estándares de clase mundial</h2>
             </div>
 
             <div class="lideres-marquee avalan-marquee">

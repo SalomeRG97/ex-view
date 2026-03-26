@@ -18,7 +18,7 @@
 body {
     font-family: var(--font-family);
     color: var(--text-dark);
-    background-color: #f8fafc;
+    background-color: #ffffff;
     line-height: 1.5;
 }
 
@@ -77,6 +77,42 @@ nav a.btn-demo {
     font-weight: 600;
 }
 
+nav a.btn-nav-login {
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important;
+    padding: 0.5rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
+}
+
+nav a.btn-nav-login:hover {
+    background-color: #eab308;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(250, 204, 21, 0.5);
+}
+
+.logo,
+nav {
+    transition: transform 0.3s ease;
+}
+
+header.scrolled .logo,
+header.scrolled nav {
+    transform: scale(0.9);
+}
+
+header.scrolled {
+    padding-top: 2.2rem;
+    padding-bottom: 0.4rem;
+}
+
+header.scrolled .logo,
+header.scrolled nav {
+    transform: scale(0.9);
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -120,7 +156,8 @@ nav a.btn-demo {
     z-index: 2;
     display: flex;
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
+    padding: 0 4%;
     margin: 0 auto;
 }
 
@@ -168,6 +205,23 @@ nav a.btn-demo {
     margin-bottom: 2.5rem;
     color: #cbd5e1;
     font-weight: 400;
+}
+
+.hero-column.right .hero-right-line {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    color: var(--text-white);
+}
+
+.hero-column.right .hero-right-highlight {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    line-height: 1.1;
+    margin-top: 0.5rem;
 }
 
 .features-list {
@@ -344,6 +398,8 @@ nav a.btn-demo {
     color: #000000;
 }
 
+
+
 /* Tech Section */
 .tech-section {
     padding: 8rem 5%;
@@ -360,17 +416,18 @@ nav a.btn-demo {
 
 .tech-text {
     flex: 0 0 25%;
-    /* Aproximadamente 25% del ancho */
 }
 
-.tech-text h2 {
+.tech-title {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    text-transform: uppercase;
 }
+
+/* Para mantener la primera letra en mayúscula pero el resto en minúscula si lo desea, 
+   o estrictamente todo minúscula. text-transform: lowercase hace todo minúscula. */
 
 .tech-text p {
     color: #475569;
@@ -381,8 +438,8 @@ nav a.btn-demo {
 .tech-carousel-wrapper {
     flex: 1;
     position: relative;
-    /* Cambiado de 'hidden' a 'visible' para permitir que los botones se salgan del contorno de las imágenes */
     overflow: visible;
+    /* Permite que los botones flotantes se vean completos */
 }
 
 /* Contenedor extra para ocultar el scroll de las imágenes sin cortar los botones flotantes */
@@ -717,7 +774,8 @@ nav a.btn-demo {
 .exp-btn-container {
     text-align: center;
     margin-bottom: 4rem;
-    margin-top: 1.5rem; /* Separar del video */
+    margin-top: 1.5rem;
+    /* Separar del video */
 }
 
 .btn-outline-white {
@@ -816,7 +874,7 @@ nav a.btn-demo {
 
 /* Capacidad Funcional Section */
 .capacidad-section {
-    padding: 2rem 5% 4rem;
+    padding: 4rem 5% 4rem;
 }
 
 .capacidad-header {
@@ -928,45 +986,128 @@ nav a.btn-demo {
     margin: 0 auto 4rem auto;
 }
 
-.eligen-zigzag {
+.eligen-grid {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
-.zigzag-item {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+.eligen-card {
+    width: calc(25% - 1.5rem);
+    /* 4 cards per row logic */
     background: white;
-    padding: 3rem;
-    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.zigzag-item:hover {
+.eligen-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-.zigzag-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.zigzag-icon {
-    flex: 0 0 200px;
+.eligen-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.5rem;
+    height: 90px;
 }
 
-.zigzag-icon img {
-    width: 100%;
-    max-width: 140px;
+.eligen-icon img {
+    max-height: 100%;
+    width: auto;
+    max-width: 120px;
     object-fit: contain;
+}
+
+.eligen-card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    /* Semibold */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eligen-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-top 0.5s ease;
+    text-align: left;
+    opacity: 0;
+}
+
+.eligen-card.expanded .eligen-card-content {
+    max-height: 500px;
+    margin-top: 1rem;
+    opacity: 1;
+}
+
+.eligen-card-content p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.btn-expandir {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    outline: none;
+}
+
+.btn-expandir:hover {
+    color: #eab308;
+}
+
+.btn-expandir .arrow {
+    transition: transform 0.4s ease;
+    font-size: 0.8rem;
+}
+
+.eligen-card.expanded .btn-expandir .arrow {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1024px) {
+    .eligen-card {
+        width: calc(50% - 1rem);
+        /* 2 cards per row on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .eligen-card {
+        width: 100%;
+        /* 1 card per row on mobile */
+    }
+
+    .eligen-card-title {
+        min-height: auto;
+    }
 }
 
 .zigzag-text {
@@ -1014,8 +1155,10 @@ nav a.btn-demo {
 
 .lideres-marquee {
     width: 100%;
-    max-width: 1200px; /* Igualar al max-width de testimonials-grid */
-    margin: 0 auto 4rem auto; /* Centrar e inferior margen */
+    max-width: 1200px;
+    /* Igualar al max-width de testimonials-grid */
+    margin: 0 auto 4rem auto;
+    /* Centrar e inferior margen */
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -1039,9 +1182,11 @@ nav a.btn-demo {
 
 .marquee-track img {
     /* Mantenemos 4 logos visibles pero usamos mucho más del espacio disponible en altura y eliminamos casi todo el padding */
-    width: min(calc(1200px / 4), 25vw); 
-    height: 180px; /* Incrementado dramáticamente */
-    padding: 0 0.5rem; /* Padding mínimo para que ocupen máximo espacio */
+    width: min(calc(1200px / 4), 25vw);
+    height: 180px;
+    /* Incrementado dramáticamente */
+    padding: 0 0.5rem;
+    /* Padding mínimo para que ocupen máximo espacio */
     object-fit: contain;
     filter: grayscale(100%) opacity(0.6);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -1056,7 +1201,8 @@ nav a.btn-demo {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Exactamente 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Exactamente 2 columnas */
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -1916,28 +2062,30 @@ nav a.btn-demo {
     }
 
     .marquee-track img {
-        width: 30vw; /* 3 logos aprox en teléfonos muy pequeños */
-        height: 120px; /* Incrementado dramáticamente en móviles */
+        width: 30vw;
+        /* 3 logos aprox en teléfonos muy pequeños */
+        height: 120px;
+        /* Incrementado dramáticamente en móviles */
         padding: 0 0.2rem;
     }
 
     /* Experiencia Section Mobile Twaks */
 
-    
+
     .exp-intro {
         flex-direction: column;
         gap: 2rem;
         text-align: center;
     }
-    
+
     .exp-text h2 {
         font-size: 1.8rem;
     }
-    
+
     .exp-text p {
         font-size: 1.1rem;
     }
-    
+
     .exp-stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem 1rem;
@@ -1948,4 +2096,283 @@ nav a.btn-demo {
     .exp-stats-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --- New Services Section --- */
+.new-services-section {
+    padding: 2rem 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.ns-header {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+}
+
+.ns-logo {
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+
+.ns-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+.ns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.ns-card {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.ns-card:hover {
+    transform: translateY(-10px);
+}
+
+.ns-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.ns-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ns-card:hover .ns-img {
+    transform: scale(1.05);
+}
+
+.ns-card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+    transition: color 0.3s ease;
+    margin-top: 0;
+    display: block;
+}
+
+.ns-card:hover .ns-card-title {
+    color: #f5cc1c;
+}
+
+@media (max-width: 992px) {
+    .ns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ns-card:last-child {
+        grid-column: span 2;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .ns-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ns-card:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .ns-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- Service Interior Pages Styles --- */
+.service-hero-layout {
+    background-color: var(--primary-color);
+    padding: 7rem 5% 4rem;
+    /* Reducido espacio arriba */
+}
+
+.sh-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sh-content {
+    flex: 1;
+    color: var(--text-white);
+}
+
+.sh-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+.sh-content p.lead {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.sh-video-wrapper {
+    flex: 1;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+    .sh-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-hero-layout {
+        padding: 6rem 5% 4rem;
+    }
+}
+
+/* Animaciones y estilos de las características */
+.service-features-section {
+    padding: 6rem 5%;
+    background-color: #f8fafc;
+}
+
+.service-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-number {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(250, 204, 21, 0.2);
+    line-height: 1;
+}
+
+.feature-box h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-box p {
+    color: #475569;
+    line-height: 1.6;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-book-demo-large {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 4rem;
+}
+
+.btn-book-demo-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.4);
+}
+
+/* --- Alternating Section Backgrounds --- */
+.new-services-section {
+    background-color: #f8fafc !important;
+}
+
+.tech-section {
+    background-color: #ffffff !important;
+}
+
+#productos {
+    background-color: #f8fafc !important;
+    /* Thermoscope */
+}
+
+.sentinel-section {
+    background-color: #ffffff !important;
+    /* Sentinel */
+}
+
+/* .experiencia-section se omite para conservar el fondo amarillo del video separador */
+.capacidad-section {
+    background-color: #f8fafc !important;
+}
+
+.gestion-section {
+    background-color: #ffffff !important;
+}
+
+.alliance-section {
+    background-color: #f8fafc !important;
+}
+
+.difference-section {
+    background-color: #ffffff !important;
+}
+
+.eligen-section {
+    background-color: #f8fafc !important;
+}
+
+#lideres {
+    background-color: #ffffff !important;
+}
+
+#avalan {
+    background-color: #ffffff !important;
 }
