@@ -93,6 +93,67 @@ nav a.btn-nav-login:hover {
     box-shadow: 0 6px 15px rgba(250, 204, 21, 0.5);
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* Space between logo and left menu */
+}
+
+/* Dropdown Styles */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 230px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    z-index: 200;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeInDown 0.2s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #475569;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+}
+
 .logo,
 nav {
     transition: transform 0.3s ease;
@@ -298,7 +359,7 @@ header.scrolled nav {
 /* --- Banner Section --- */
 .banner-section {
     background-color: #ffffff;
-    padding: 2rem 5%;
+    padding: 4rem 5%;
     color: var(--primary-color);
 }
 
@@ -681,7 +742,7 @@ header.scrolled nav {
 
 /* Product Detail Section */
 .product-detail-section {
-    padding: 6rem 5% 8rem;
+    padding: 4rem 5% 4rem;
     /* Fondo degradado: Empieza en amarillo fuerte, baja a blanco en el centro y vuelve a amarillo fluido al final */
     /* background: linear-gradient(to bottom, #FCD21D 0%, #ffffff 15%, #ffffff 85%, #FCD21D 100%); */
 }
@@ -1005,7 +1066,8 @@ header.scrolled nav {
 
 /* Capacidad Funcional Section */
 .capacidad-section {
-    padding: 4rem 5% 4rem;
+    padding: 2rem 5% 4rem;
+    background-color: #f8fafc;
 }
 
 .capacidad-header {
@@ -1393,8 +1455,7 @@ header.scrolled nav {
 
 /* Alianza Estratégica Section */
 .alliance-section {
-    padding: 6rem 5%;
-    background-color: #ffffff;
+    padding: 4rem 5%;
 }
 
 .alliance-container {
@@ -2237,7 +2298,8 @@ header.scrolled nav {
 
 /* --- New Services Section --- */
 .new-services-section {
-    padding: 4rem 5%;
+    padding: 1rem 5%;
+    padding-bottom: 4rem;
     background-color: #ffffff;
     text-align: center;
 }
@@ -2247,10 +2309,72 @@ header.scrolled nav {
     margin: 0 auto 2rem auto;
 }
 
-.ns-logo {
-    height: 120px;
+.animated-logo-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.sun-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.9) 0%, rgba(250, 204, 21, 0.5) 40%, transparent 70%);
+    box-shadow: 0 0 60px 10px rgba(250, 204, 21, 0.3);
+    filter: blur(10px);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    animation: sunrise-glow 3s ease-in-out infinite alternate;
+    animation-delay: 1.5s;
+    /* Evitar que el clic interfiera con el sol si sucede */
+    pointer-events: none;
+}
+
+@keyframes sunrise-glow {
+    0% {
+        width: 100px;
+        height: 100px;
+        opacity: 0.15;
+    }
+
+    100% {
+        width: 220px;
+        height: 220px;
+        opacity: 0.6;
+    }
+}
+
+.ns-logo-animated {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
     object-fit: contain;
-    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: logo-fade-in 1.5s ease-out forwards;
+}
+
+@keyframes logo-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .ns-title {
@@ -2468,7 +2592,7 @@ header.scrolled nav {
 
 /* --- Alternating Section Backgrounds --- */
 .new-services-section {
-    background-color: #f8fafc !important;
+    background-color: #ffffff !important;
 }
 
 .tech-section {
@@ -2486,19 +2610,19 @@ header.scrolled nav {
 }
 
 .gestion-section {
-    background-color: #ffffff !important;
+    background-color: #2789ec !important;
 }
 
 .alliance-section {
-    background-color: #f8fafc !important;
-}
-
-.difference-section {
     background-color: #ffffff !important;
 }
 
-.eligen-section {
+.difference-section {
     background-color: #f8fafc !important;
+}
+
+.eligen-section {
+    background-color: #ffffff !important;
 }
 
 #lideres {
@@ -2507,4 +2631,54 @@ header.scrolled nav {
 
 #avalan {
     background-color: #ffffff !important;
+}
+
+/* --- Sección Revolución --- */
+.revolucion-section {
+    background-color: #1A2737;
+    padding: 2rem 5%;
+}
+
+.revolucion-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.rev-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.rev-video {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    /* Quita los bordes negros del video dejándolo azul */
+    -webkit-mask-image: radial-gradient(circle, black 10%, transparent 60%);
+    mask-image: radial-gradient(circle, black 25%, transparent 65%);
+    border-radius: 20px;
+}
+
+.rev-right {
+    flex: 1;
+}
+
+.rev-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #facc15;
+}
+
+@media (max-width: 992px) {
+    .revolucion-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }

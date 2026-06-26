@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathfinder - Ex-view Solar</title>
+    <title>Tracker - Ex-view Solar</title>
     <link rel="stylesheet" href="styles.css?v=19">
     <script src="script.js?v=9" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -13,12 +13,35 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="media/logo-nav.png" alt="Ex-view Solar Logo" class="nav-logo">
-            </a>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="media/logo-nav.png" alt="Ex-view Solar Logo" class="nav-logo">
+                </a>
+            </div>
+            <nav class="nav-left">
+                <ul>
+                    <li class="nav-dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle">Soluciones <span class="arrow">▾</span></a>
+                        <div class="dropdown-content">
+                            <a href="index.html#productos">Thermoscope</a>
+                            <a href="index.html#sentinel">Sentinel</a>
+                            <a href="pathfinder.html">Pathfinder</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle">Empresa <span class="arrow">▾</span></a>
+                        <div class="dropdown-content">
+                            <a href="nosotros.html">Acerca de nosotros</a>
+                            <a href="nosotros.html#valores">Nuestros valores</a>
+                            <a href="nosotros.html#equipo">Nuestro equipo</a>
+                            <a href="nosotros.html#presencia">Presencia internacional</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
+        <nav class="nav-right">
             <ul>
                 <li><a href="https://ex-view.com/empleos/" target="_blank">Trabaja con nosotros</a></li>
                 <li><a href="https://ex-view.com/empleos/" target="_blank">Sostenibilidad</a></li>
@@ -34,11 +57,25 @@
         <section class="service-hero-layout">
             <div class="sh-container">
                 <div class="sh-content">
-                    <h1>Pathfinder</h1>
-                    <p class="lead">El servicio que les presentamos se refiere al sistema del análisis del rendimiento de plantas fotovoltaicas. PATHFINDER ejecuta diagnósticos en tiempo real de Inversores, Strings, STS y Trackers, proporcionando actualizaciones constantes de los datos en el sistema cada 5 minutos, y presentándolos en una sola vista gerencial de gestión.</p>
+                    <h1>EX-VIEW Solar – Pathfinder</h1>
+                    <p class="lead" style="margin-bottom: 1rem;"><strong>Supervisión transparente y colaborativa del
+                            progreso de su planta solar.</strong></p>
+                    <p class="lead" style="margin-bottom: 1rem;">EX-VIEW SOLAR TRACKER es una solución integral que
+                        acompaña cada fase del ciclo de vida de una planta solar: Pre-construcción, construcción,
+                        comisionamiento y operaciones.<br>Combina drones, modelos digitales, inteligencia artificial y
+                        gestión colaborativa para asegurar precisión, eficiencia y control total.</p>
+                    <p class="lead" style="margin-bottom: 1rem;">Con vuelos programados y/o automatizados, genera
+                        ortomosaicos georreferenciados de alta resolución, compara el diseño original con la ejecución
+                        real y contabiliza elementos clave como módulos, mesas, strings, inversores, baterías, pilotes,
+                        cableado, caminos y vallado.</p>
+                    <p class="lead">EX-VIEW SOLAR TRACKER permite monitorear el avance de obra para todos los
+                        componentes de la Planta Solar:<br><br>🌍 Terrenos y curvas de nivel · 🪨 Fundaciones y pilotes
+                        · ☀️ Módulos · 🛠️ Mesas · 🔗 Strings · 📦 Combiner Boxes · ⚡ STS y CT · 🔋 Baterías · 🔄
+                        Trackers · 🌡️ Estaciones meteorológicas · 📡 Sistemas SCAD</p>
                 </div>
                 <div class="sh-video-wrapper">
-                    <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;" poster="media/pathfinder.jpg">
+                    <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"
+                        poster="media/pathfinder.jpg">
                         <source src="media/SentinelServicio.mp4" type="video/mp4">
                         Tu navegador no soporta el formato de video.
                     </video>
@@ -49,62 +86,86 @@
         <!-- Características -->
         <section class="service-features-section">
             <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 class="ns-title text-center" style="margin-bottom: 1rem;">La solución PATHFINDER incluye las siguientes características:</h2>
+                <h2 class="ns-title text-center" style="margin-bottom: 1rem;">Con EX-VIEW SOLAR TRACKER:</h2>
             </div>
-            
+
             <div class="service-features-grid">
                 <!-- Feature 1 -->
                 <div class="feature-box">
                     <div class="feature-number">01</div>
-                    <h3>Análisis de Rendimiento</h3>
-                    <p>Analiza el rendimiento del sistema fotovoltaico en términos de producción a nivel de inversor, string, combiner box, STS y Trackers a lo largo del tiempo (kWh/kWp), nivel de irradiancia y disponibilidad técnica (%).</p>
+                    <h3>Inspecciona</h3>
+                    <p>Gestión de Vuelos automatizados para control en sitio.</p>
                 </div>
                 <!-- Feature 2 -->
                 <div class="feature-box">
                     <div class="feature-number">02</div>
-                    <h3>Índices Clave</h3>
-                    <p>El índice de rendimiento (PR) y el índice de disponibilidad (AR) se calculan para el análisis de la producción de energía en comparación con el promedio histórico.</p>
+                    <h3>Analiza</h3>
+                    <p>Detección de desviaciones frente a CAD con IA.</p>
                 </div>
                 <!-- Feature 3 -->
                 <div class="feature-box">
                     <div class="feature-number">03</div>
-                    <h3>Eficiencia Energética</h3>
-                    <p>Adicionalmente se incluye el cálculo del Índice de Rendimiento Energético (EPI y PPI), y Disponibilidad en los contratos EPC & O&M.</p>
+                    <h3>Gestiona</h3>
+                    <p>Generación de informes automáticos y notificaciones.</p>
                 </div>
                 <!-- Feature 4 -->
                 <div class="feature-box">
                     <div class="feature-number">04</div>
-                    <h3>Modelo Digital (Gemelo)</h3>
-                    <p>Se crea un modelo digital del parque fotovoltaico para el análisis avanzado del rendimiento, y se suministran los API’s requeridos para integración de los datos en herramientas de Reportes Inteligentes.</p>
+                    <h3>Visualiza</h3>
+                    <p>Visualización del avance gráfico y la correlación con costos de obras civiles, mecánicas y
+                        eléctricas.</p>
                 </div>
                 <!-- Feature 5 -->
                 <div class="feature-box">
                     <div class="feature-number">05</div>
-                    <h3>Detección de Anomalías</h3>
-                    <p>Se detectan y clasifican las anomalías en función de los datos de instalación disponibles y se categorizan las pérdidas de energía.</p>
+                    <h3>Integra</h3>
+                    <p>Conexión de todos los componentes para Comisionamiento.</p>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 4rem; margin-top: 4rem;">
+                <h2 class="ns-title text-center" style="margin-bottom: 1rem;">La solución TRACKER incluye las siguientes
+                    características:</h2>
+            </div>
+
+            <div class="service-features-grid">
                 <!-- Feature 6 -->
                 <div class="feature-box">
                     <div class="feature-number">06</div>
-                    <h3>Alertas Inteligentes</h3>
-                    <p>Se proporcionan alertas sobre problemas críticos y cualquier anomalía o caída de rendimiento.</p>
+                    <h3>Preconstrucción</h3>
+                    <p>Evaluación del terreno y curvas de nivel con drones. Optimización de diseños con IA y validación
+                        de viabilidad para inversionistas, gestores de activos y EPC.</p>
                 </div>
                 <!-- Feature 7 -->
                 <div class="feature-box">
                     <div class="feature-number">07</div>
-                    <h3>Gestión In-Situ</h3>
-                    <p>Se provee un CMMS integrado en la solución, para gestionar en tiempo real el mantenimiento. Gestiona los equipos o contratistas en sitio obteniendo una gestión diaria del mantenimiento de los activos solares de la empresa.</p>
+                    <h3>Construcción</h3>
+                    <p>Supervisión aérea en tiempo real con seguimiento automatizado del progreso haciendo énfasis en el
+                        control detallado de componentes clave. Uso de IA para detectar desviaciones mayores a 10 cm con
+                        respecto al diseño original con reportes digitales que sustituyen tareas manuales y reducen
+                        errores hasta un 20%.</p>
                 </div>
                 <!-- Feature 8 -->
                 <div class="feature-box">
                     <div class="feature-number">08</div>
-                    <h3>Manejo del Impacto</h3>
-                    <p>El impacto de las pérdidas de rendimiento se indica con base en los resultados de la inspección térmica y se analiza en el mediano y largo plazo con base en el Año Meteorológico Típico (TMY).</p>
+                    <h3>Comisionamiento</h3>
+                    <p>Verificación de calidad y rendimiento del sistema, a través del registro de datos de Inspecciones
+                        térmicas y eléctricas.</p>
+                </div>
+                <!-- Feature 9 -->
+                <div class="feature-box">
+                    <div class="feature-number">09</div>
+                    <h3>Operaciones</h3>
+                    <p>Monitoreo en tiempo real con EX-View Sentinel y programación de Termografías solares y análisis
+                        de rendimiento con EX-View Solar THERMOSCOPE. El objetivo fundamental se centra en el
+                        diagnóstico preventivo mediante inspecciones aéreas periódicas para obtener el historial
+                        completo de estados e intervenciones de cada componente.</p>
                 </div>
             </div>
-            
+
             <div style="text-align: center;">
-                <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled" target="_blank" class="btn-book-demo-large">Agendar una demo</a>
+                <a href="https://outlook.office.com/bookwithme/user/ec80f24293d140fbab57c93c420489b5%40ex-view.com/meetingtype/DexZnxR1p0GSkdsBgtetCQ2?anonymous&ismsaljsauthenabled"
+                    target="_blank" class="btn-book-demo-large">Agendar una demo</a>
             </div>
         </section>
     </main>
@@ -175,4 +236,5 @@
         </div>
     </footer>
 </body>
+
 </html>

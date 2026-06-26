@@ -1,0 +1,309 @@
+/* nosotros.css */
+
+.nosotros-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.nosotros-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.nosotros-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 39, 55, 0.75);
+    /* Match typical primary dark */
+    z-index: -1;
+}
+
+.nosotros-hero-content {
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem 1rem;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros-title,
+h2.main-title {
+    font-size: 3rem !important;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.nosotros-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.hero-rotating-text {
+    position: relative;
+    height: 80px; 
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+}
+
+.hero-rotating-text .rotating-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    animation: rotateText 16s infinite;
+}
+
+.hero-rotating-text .rotating-item svg {
+    flex-shrink: 0;
+    color: var(--secondary-color, #F2C94C);
+    width: 28px;
+    height: 28px;
+}
+
+@keyframes rotateText {
+    0% { opacity: 0; transform: translateY(20px); }
+    5% { opacity: 1; transform: translateY(0); }
+    20% { opacity: 1; transform: translateY(0); }
+    25% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.hero-rotating-text .rotating-item:nth-child(1) { animation-delay: 0s; }
+.hero-rotating-text .rotating-item:nth-child(2) { animation-delay: 4s; }
+.hero-rotating-text .rotating-item:nth-child(3) { animation-delay: 8s; }
+.hero-rotating-text .rotating-item:nth-child(4) { animation-delay: 12s; }
+
+/* Yellow Line */
+.yellow-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color, #F2C94C);
+    /* Fallback yellow */
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+}
+
+.yellow-line.center-line {
+    margin: 0.5rem auto 2rem auto;
+}
+
+.btn-yellow {
+    background-color: var(--secondary-color, #F2C94C);
+    color: var(--primary-color, #1A2737);
+    transition: background-color 0.3s;
+}
+
+.btn-yellow:hover {
+    background-color: #dcb33d;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Valores Section */
+.valores-section {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valor-card {
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.valor-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.valor-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color, #1A2737);
+    margin-bottom: 1rem;
+}
+
+.valor-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Equipo Section */
+.equipo-section {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+}
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipo-card {
+    text-align: center;
+}
+
+.equipo-img-wrapper {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.25rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e9ecef;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.equipo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.equipo-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color, #1A2737);
+    margin-bottom: 0.25rem;
+}
+
+.equipo-role {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--secondary-color, #F2C94C);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.equipo-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Presencia Section */
+.presencia-section {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.presencia-text {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.presencia-logo {
+    max-width: 150px;
+    margin: 0 auto 3rem auto;
+    display: block;
+}
+
+.presencia-mapa {
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .equipo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nosotros-title,
+    h2.main-title {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-rotating-text .rotating-item {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 8px;
+        white-space: normal;
+    }
+    .hero-rotating-text {
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+    }
+}
