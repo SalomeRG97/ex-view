@@ -1,0 +1,647 @@
+/* ============================================
+   EBEDIX Platforms - Página de Contacto
+   ============================================ */
+
+/* Variables y Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --contact-primary: #1a2634;
+    --contact-primary-light: #243447;
+    --contact-accent-blue: #2789ec;
+    --contact-accent-cyan: #00bcd4;
+    --contact-yellow: #facc15;
+    --contact-bg-light: #f8fafc;
+    --contact-text-white: #ffffff;
+    --contact-text-dark: #1e293b;
+    --contact-text-muted: #64748b;
+    --contact-border: #e2e8f0;
+    --contact-error: #ef4444;
+    --contact-success: #22c55e;
+    --contact-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---- Page Layout ---- */
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--contact-font);
+    background-color: var(--contact-bg-light);
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.contact-header-top {
+    background: #ffffff;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--contact-border);
+    position: relative;
+    z-index: 10;
+}
+
+.contact-brand-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-brand-title .brand-logo-img {
+    height: 48px;
+    object-fit: contain;
+}
+
+.contact-brand-title .brand-platforms {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--contact-primary);
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.contact-header-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-header-badge img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ============================================
+   INTRO
+   ============================================ */
+.contact-intro {
+    padding: 3rem 5% 1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-welcome {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--contact-text-dark);
+    line-height: 1.6;
+}
+
+/* ============================================
+   TWO COLUMN GRID
+   ============================================ */
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 2rem 5% 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+    width: 100%;
+}
+
+/* ============================================
+   LEFT COLUMN (WhatsApp & Email)
+   ============================================ */
+.contact-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.direct-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem;
+    background: var(--contact-text-white);
+    border-radius: 16px;
+    border: 1px solid var(--contact-border);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.direct-contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+    border-color: var(--contact-accent-blue);
+}
+
+.direct-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-card:hover::before {
+    background: #25D366;
+}
+
+.email-card:hover::before {
+    background: var(--contact-accent-blue);
+}
+
+.card-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--contact-bg-light);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--contact-text-dark);
+    transition: fill 0.3s ease;
+}
+
+.email-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--contact-text-dark);
+    stroke-width: 1.5;
+    transition: stroke 0.3s ease;
+}
+
+.whatsapp-card:hover .card-icon-wrapper {
+    background: rgba(37, 211, 102, 0.1);
+}
+.whatsapp-card:hover .whatsapp-icon svg {
+    fill: #25D366;
+}
+
+.email-card:hover .card-icon-wrapper {
+    background: rgba(39, 137, 236, 0.1);
+}
+.email-card:hover .email-icon svg {
+    stroke: var(--contact-accent-blue);
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--contact-primary);
+    margin-bottom: 0.3rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--contact-text-muted);
+    line-height: 1.4;
+}
+
+.card-content .email-address {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-weight: 500;
+    color: var(--contact-accent-blue);
+    text-decoration: none;
+}
+
+.card-arrow {
+    margin-left: auto;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.card-arrow svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--contact-text-muted);
+}
+
+.direct-contact-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.whatsapp-card:hover .card-arrow svg { stroke: #25D366; }
+.email-card:hover .card-arrow svg { stroke: var(--contact-accent-blue); }
+
+/* ============================================
+   RIGHT COLUMN (FORM)
+   ============================================ */
+.contact-form-card {
+    background: var(--contact-text-white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--contact-border);
+}
+
+.contact-form-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--contact-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-subtitle {
+    font-size: 0.95rem;
+    color: var(--contact-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Form Grid */
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1.1rem;
+}
+
+.contact-form-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+/* Form Fields */
+.contact-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-field label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--contact-text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.contact-field label .required {
+    color: var(--contact-error);
+    margin-left: 2px;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1.5px solid var(--contact-border);
+    border-radius: 8px;
+    font-family: var(--contact-font);
+    font-size: 0.95rem;
+    color: var(--contact-text-dark);
+    background-color: var(--contact-bg-light);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+.contact-field textarea {
+    min-height: 80px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: var(--contact-accent-blue);
+    box-shadow: 0 0 0 4px rgba(39, 137, 236, 0.1);
+    background-color: var(--contact-text-white);
+}
+
+/* Validation error */
+.contact-field.error input,
+.contact-field.error select,
+.contact-field.error textarea {
+    border-color: var(--contact-error);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.08);
+}
+
+.contact-field .field-error {
+    font-size: 0.78rem;
+    color: var(--contact-error);
+    margin-top: 0.35rem;
+    display: none;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.contact-field .field-error svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.contact-field.error .field-error {
+    display: flex;
+}
+
+/* Privacy Checkbox */
+.contact-privacy {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--contact-accent-blue);
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.checkbox-text {
+    font-size: 0.85rem;
+    color: var(--contact-text-muted);
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-text a {
+    color: var(--contact-accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-text a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.contact-submit-btn {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    background: linear-gradient(135deg, var(--contact-primary) 0%, var(--contact-primary-light) 100%);
+    color: var(--contact-text-white);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--contact-font);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-submit-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--contact-accent-blue) 0%, var(--contact-accent-cyan) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.contact-submit-btn:hover::before {
+    opacity: 1;
+}
+
+.contact-submit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(39, 137, 236, 0.3);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0);
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.contact-submit-btn:disabled::before {
+    opacity: 0;
+}
+
+/* Loading spinner */
+.contact-submit-btn .submit-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--contact-text-white);
+    border-radius: 50%;
+    animation: contactSpin 0.6s linear infinite;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-submit-btn.loading span {
+    display: none;
+}
+
+.contact-submit-btn.loading .submit-spinner {
+    display: block;
+}
+
+@keyframes contactSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.contact-success-message {
+    display: none;
+    text-align: center;
+    padding: 3rem 1rem;
+    animation: contactFadeUp 0.6s ease;
+}
+
+.contact-success-message.show {
+    display: block;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--contact-success), #16a34a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon svg {
+    width: 36px;
+    height: 36px;
+    stroke: var(--contact-text-white);
+    fill: none;
+    stroke-width: 3;
+}
+
+.contact-success-message h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--contact-primary);
+    margin-bottom: 0.75rem;
+}
+
+.contact-success-message p {
+    font-size: 1rem;
+    color: var(--contact-text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn-new-request {
+    padding: 0.75rem 2rem;
+    background: transparent;
+    border: 2px solid var(--contact-accent-blue);
+    color: var(--contact-accent-blue);
+    border-radius: 10px;
+    font-family: var(--contact-font);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-new-request:hover {
+    background: var(--contact-accent-blue);
+    color: var(--contact-text-white);
+}
+
+@keyframes contactFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   FOOTER (Logos y Legal)
+   ============================================ */
+.contact-footer-bottom {
+    margin-top: auto;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid var(--contact-border);
+    padding: 3rem 5% 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.contact-footer-static-img {
+    height: 85px;
+    object-fit: contain;
+}
+
+.contact-header-legal {
+    font-size: 0.85rem;
+    color: var(--contact-text-muted);
+    line-height: 1.8;
+}
+
+.contact-header-legal strong {
+    color: var(--contact-text-dark);
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet (Max 992px) */
+@media (max-width: 992px) {
+    .contact-main-grid {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+        gap: 2rem;
+        padding-top: 1rem;
+    }
+    
+    .contact-left-column {
+        flex-direction: row; /* Cards side by side */
+        gap: 1rem;
+    }
+
+    .direct-contact-card {
+        flex: 1;
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile (Max 768px) */
+@media (max-width: 768px) {
+    .contact-header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 5%;
+    }
+
+    .contact-brand-title .brand-platforms {
+        font-size: 2.8rem;
+    }
+
+    .contact-left-column {
+        flex-direction: column; /* Cards stacked */
+    }
+
+    .contact-form-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+}

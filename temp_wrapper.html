@@ -1,0 +1,204 @@
+            <!-- ============================================
+                 SECCIÓN B — Contenedor Dinámico
+                 ============================================ -->
+            <section class="contact-dynamic-wrapper" id="dynamic-wrapper">
+                <div class="contact-dynamic-container">
+
+                    <!-- Panel: Solicitudes (Formulario) -->
+                    <div class="contact-panel" id="panel-solicitudes">
+                        <div class="contact-form-card">
+                            <h2 class="contact-form-title">Envíanos tu solicitud</h2>
+                            <p class="contact-form-subtitle">Completa el formulario y nos pondremos en contacto contigo a
+                                la brevedad.</p>
+
+                            <form id="contact-form" novalidate>
+                                <div class="contact-form-grid">
+                                    <!-- Nombre -->
+                                    <div class="contact-field" data-required="true">
+                                        <label for="contact-nombre">Nombre <span class="required">*</span></label>
+                                        <input type="text" id="contact-nombre" name="nombre" placeholder="Tu nombre"
+                                            autocomplete="given-name">
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            Este campo es obligatorio
+                                        </div>
+                                    </div>
+
+                                    <!-- Apellidos -->
+                                    <div class="contact-field" data-required="true">
+                                        <label for="contact-apellidos">Apellidos <span class="required">*</span></label>
+                                        <input type="text" id="contact-apellidos" name="apellidos"
+                                            placeholder="Tus apellidos" autocomplete="family-name">
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            Este campo es obligatorio
+                                        </div>
+                                    </div>
+
+                                    <!-- Correo electrónico -->
+                                    <div class="contact-field" data-required="true" data-type="email">
+                                        <label for="contact-email">Correo electrónico <span
+                                                class="required">*</span></label>
+                                        <input type="email" id="contact-email" name="email"
+                                            placeholder="correo@ejemplo.com" autocomplete="email">
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            <span class="error-text">Este campo es obligatorio</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Teléfono -->
+                                    <div class="contact-field">
+                                        <label for="contact-telefono">Teléfono</label>
+                                        <input type="tel" id="contact-telefono" name="telefono"
+                                            placeholder="+57 300 000 0000" autocomplete="tel">
+                                    </div>
+
+                                    <!-- País -->
+                                    <div class="contact-field" data-required="true">
+                                        <label for="contact-pais">País <span class="required">*</span></label>
+                                        <div class="select-wrapper">
+                                            <select id="contact-pais" name="pais">
+                                                <option value="" disabled selected>Seleccionar país</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="México">México</option>
+                                                <option value="Perú">Perú</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="España">España</option>
+                                                <option value="Otro">Otro</option>
+                                            </select>
+                                        </div>
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            Este campo es obligatorio
+                                        </div>
+                                    </div>
+
+                                    <!-- Área de interés -->
+                                    <div class="contact-field" data-required="true">
+                                        <label for="contact-area">¿Con quién desea hablar? <span
+                                                class="required">*</span></label>
+                                        <div class="select-wrapper">
+                                            <select id="contact-area" name="area">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="Ventas">Ventas y Asesoría Comercial</option>
+                                                <option value="Soporte">Soporte Técnico (Thermoscope/Sentinel/Pathfinder)
+                                                </option>
+                                                <option value="Alianzas">Alianzas Estratégicas y Partners</option>
+                                                <option value="Recursos Humanos">Recursos Humanos / Empleos</option>
+                                                <option value="Otro">Otro motivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            Seleccione un área de interés
+                                        </div>
+                                    </div>
+
+                                    <!-- Mensaje -->
+                                    <div class="contact-field full-width" data-required="true">
+                                        <label for="contact-mensaje">Mensaje <span class="required">*</span></label>
+                                        <textarea id="contact-mensaje" name="mensaje" rows="4"
+                                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            Escribe un mensaje para continuar
+                                        </div>
+                                    </div>
+
+                                    <!-- Consentimiento -->
+                                    <div class="contact-field full-width checkbox-field" data-required="true">
+                                        <label class="checkbox-container">
+                                            <input type="checkbox" id="contact-consentimiento" name="consentimiento">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Acepta las <a href="#">políticas de privacidad</a>
+                                                y los <a href="#">términos de servicio</a> de EBEDIX</span>
+                                        </label>
+                                        <div class="field-error">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <line x1="12" y1="8" x2="12" y2="12" />
+                                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                                            </svg>
+                                            Debes aceptar las políticas para continuar
+                                        </div>
+                                    </div>
+
+                                    <!-- Botón Submit -->
+                                    <div class="contact-submit-wrapper full-width">
+                                        <button type="submit" class="contact-submit-btn" id="contact-submit-btn">
+                                            <span>Enviar Solicitud</span>
+                                            <div class="submit-spinner"></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Success Message -->
+                            <div class="contact-success-message" id="contact-success">
+                                <div class="success-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <h3>¡Mensaje enviado con éxito!</h3>
+                                <p>Gracias por contactarnos. Hemos recibido tu solicitud y un asesor de EBEDIX se pondrá en
+                                    contacto contigo lo más pronto posible.</p>
+                                <button class="btn-new-request" id="btn-new-request">Enviar otro mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel: Agendar Cita (Bookings) -->
+                    <div class="contact-panel" id="panel-agendar">
+                        <div class="contact-booking-card">
+                            <div class="contact-booking-header">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <h3>Agenda tu cita</h3>
+                            </div>
+                            <div class="contact-booking-iframe-wrapper">
+                                <div class="contact-iframe-loader" id="iframe-loader">
+                                    <div class="loader-spinner"></div>
+                                    <p>Cargando calendario...</p>
+                                </div>
+                                <!-- Iframe loaded lazily via JS -->
+                                <iframe id="booking-iframe" title="Microsoft Bookings - Agendar cita" loading="lazy"
+                                    allow="camera; microphone">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
