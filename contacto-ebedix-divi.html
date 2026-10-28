@@ -1,0 +1,967 @@
+
+<style>
+/* ============================================
+   EBEDIX Platforms - Contacto (EBEDIX Oficial)
+   ============================================ */
+.contacto-ebedix-wrapper *, .contacto-ebedix-wrapper *::before, .contacto-ebedix-wrapper *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-ebedix-wrapper {
+    --contact-primary: #1a2634;
+    --contact-primary-light: #243447;
+    --contact-accent-blue: #2789ec;
+    --contact-accent-cyan: #00bcd4;
+    --contact-yellow: #facc15;
+    --contact-bg-light: #f8fafc;
+    --contact-text-white: #ffffff;
+    --contact-text-dark: #1e293b;
+    --contact-text-muted: #64748b;
+    --contact-border: #e2e8f0;
+    --contact-error: #ef4444;
+    --contact-success: #22c55e;
+    --contact-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--contact-font);
+    background-color: var(--contact-bg-light);
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* ---- HEADER ---- */
+.contacto-ebedix-wrapper .contact-header-top {
+    background: #ffffff;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--contact-border);
+    position: relative;
+    z-index: 10;
+}
+
+.contacto-ebedix-wrapper .contact-brand-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contacto-ebedix-wrapper .contact-brand-title .brand-logo-img {
+    height: 48px;
+    object-fit: contain;
+}
+
+.contacto-ebedix-wrapper .contact-brand-title .brand-platforms {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--contact-primary);
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+/* ---- INTRO ---- */
+.contacto-ebedix-wrapper .contact-intro {
+    padding: 3rem 5% 1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contacto-ebedix-wrapper .contact-welcome {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--contact-text-dark);
+    line-height: 1.6;
+}
+
+/* ---- TWO COLUMN GRID ---- */
+.contacto-ebedix-wrapper .contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 2rem 5% 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+    width: 100%;
+}
+
+/* ---- LEFT COLUMN ---- */
+.contacto-ebedix-wrapper .contact-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contacto-ebedix-wrapper .direct-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem;
+    background: var(--contact-text-white);
+    border-radius: 16px;
+    border: 1px solid var(--contact-border);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto-ebedix-wrapper .direct-contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+    border-color: var(--contact-accent-blue);
+}
+
+.contacto-ebedix-wrapper .direct-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.contacto-ebedix-wrapper .whatsapp-card:hover::before { background: #25D366; }
+.contacto-ebedix-wrapper .email-card:hover::before { background: var(--contact-accent-blue); }
+
+.contacto-ebedix-wrapper .card-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--contact-bg-light);
+    transition: all 0.3s ease;
+}
+
+.contacto-ebedix-wrapper .whatsapp-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--contact-text-dark);
+    transition: fill 0.3s ease;
+}
+
+.contacto-ebedix-wrapper .email-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--contact-text-dark);
+    stroke-width: 1.5;
+    transition: stroke 0.3s ease;
+}
+
+.contacto-ebedix-wrapper .whatsapp-card:hover .card-icon-wrapper { background: rgba(37, 211, 102, 0.1); }
+.contacto-ebedix-wrapper .whatsapp-card:hover .whatsapp-icon svg { fill: #25D366; }
+.contacto-ebedix-wrapper .email-card:hover .card-icon-wrapper { background: rgba(39, 137, 236, 0.1); }
+.contacto-ebedix-wrapper .email-card:hover .email-icon svg { stroke: var(--contact-accent-blue); }
+
+.contacto-ebedix-wrapper .card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--contact-primary);
+    margin-bottom: 0.3rem;
+}
+
+.contacto-ebedix-wrapper .card-content p {
+    font-size: 0.9rem;
+    color: var(--contact-text-muted);
+    line-height: 1.4;
+}
+
+.contacto-ebedix-wrapper .card-content .email-address {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-weight: 500;
+    color: var(--contact-accent-blue);
+    text-decoration: none;
+}
+
+.contacto-ebedix-wrapper .card-arrow {
+    margin-left: auto;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.contacto-ebedix-wrapper .card-arrow svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--contact-text-muted);
+}
+
+.contacto-ebedix-wrapper .direct-contact-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contacto-ebedix-wrapper .whatsapp-card:hover .card-arrow svg { stroke: #25D366; }
+.contacto-ebedix-wrapper .email-card:hover .card-arrow svg { stroke: var(--contact-accent-blue); }
+
+/* ---- FORM ---- */
+.contacto-ebedix-wrapper .contact-form-card {
+    background: var(--contact-text-white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--contact-border);
+}
+
+.contacto-ebedix-wrapper .contact-form-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--contact-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contacto-ebedix-wrapper .contact-form-subtitle {
+    font-size: 0.95rem;
+    color: var(--contact-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.contacto-ebedix-wrapper .contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1.1rem;
+}
+
+.contacto-ebedix-wrapper .contact-form-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.contacto-ebedix-wrapper .contact-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-ebedix-wrapper .contact-field label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--contact-text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.contacto-ebedix-wrapper .contact-field label .required {
+    color: var(--contact-error);
+    margin-left: 2px;
+}
+
+.contacto-ebedix-wrapper .contact-field input,
+.contacto-ebedix-wrapper .contact-field select,
+.contacto-ebedix-wrapper .contact-field textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1.5px solid var(--contact-border);
+    border-radius: 8px;
+    font-family: var(--contact-font);
+    font-size: 0.95rem;
+    color: var(--contact-text-dark);
+    background-color: var(--contact-bg-light);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.contacto-ebedix-wrapper .contact-field input::placeholder,
+.contacto-ebedix-wrapper .contact-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contacto-ebedix-wrapper .contact-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+.contacto-ebedix-wrapper .contact-field textarea {
+    min-height: 80px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.contacto-ebedix-wrapper .contact-field input:focus,
+.contacto-ebedix-wrapper .contact-field select:focus,
+.contacto-ebedix-wrapper .contact-field textarea:focus {
+    border-color: var(--contact-accent-blue);
+    box-shadow: 0 0 0 4px rgba(39, 137, 236, 0.1);
+    background-color: var(--contact-text-white);
+}
+
+/* Validation */
+.contacto-ebedix-wrapper .contact-field.error input,
+.contacto-ebedix-wrapper .contact-field.error select,
+.contacto-ebedix-wrapper .contact-field.error textarea {
+    border-color: var(--contact-error);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.08);
+}
+
+.contacto-ebedix-wrapper .contact-field .field-error {
+    font-size: 0.78rem;
+    color: var(--contact-error);
+    margin-top: 0.35rem;
+    display: none;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.contacto-ebedix-wrapper .contact-field .field-error svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.contacto-ebedix-wrapper .contact-field.error .field-error {
+    display: flex;
+}
+
+/* Checkbox */
+.contacto-ebedix-wrapper .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contacto-ebedix-wrapper .checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--contact-accent-blue);
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.contacto-ebedix-wrapper .checkbox-text {
+    font-size: 0.85rem;
+    color: var(--contact-text-muted);
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.contacto-ebedix-wrapper .checkbox-text a {
+    color: var(--contact-accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contacto-ebedix-wrapper .checkbox-text a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.contacto-ebedix-wrapper .contact-submit-btn {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    background: linear-gradient(135deg, var(--contact-primary) 0%, var(--contact-primary-light) 100%);
+    color: var(--contact-text-white);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--contact-font);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto-ebedix-wrapper .contact-submit-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--contact-accent-blue) 0%, var(--contact-accent-cyan) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.contacto-ebedix-wrapper .contact-submit-btn:hover::before { opacity: 1; }
+
+.contacto-ebedix-wrapper .contact-submit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.contacto-ebedix-wrapper .contact-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(39, 137, 236, 0.3);
+}
+
+.contacto-ebedix-wrapper .contact-submit-btn:active { transform: translateY(0); }
+
+.contacto-ebedix-wrapper .contact-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.contacto-ebedix-wrapper .contact-submit-btn:disabled::before { opacity: 0; }
+
+/* Spinner */
+.contacto-ebedix-wrapper .contact-submit-btn .submit-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--contact-text-white);
+    border-radius: 50%;
+    animation: ebedixContactSpin 0.6s linear infinite;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contacto-ebedix-wrapper .contact-submit-btn.loading span { display: none; }
+.contacto-ebedix-wrapper .contact-submit-btn.loading .submit-spinner { display: block; }
+
+@keyframes ebedixContactSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success */
+.contacto-ebedix-wrapper .contact-success-message {
+    display: none;
+    text-align: center;
+    padding: 3rem 1rem;
+    animation: ebedixContactFadeUp 0.6s ease;
+}
+
+.contacto-ebedix-wrapper .contact-success-message.show { display: block; }
+
+.contacto-ebedix-wrapper .success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--contact-success), #16a34a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-ebedix-wrapper .success-icon svg {
+    width: 36px;
+    height: 36px;
+    stroke: var(--contact-text-white);
+    fill: none;
+    stroke-width: 3;
+}
+
+.contacto-ebedix-wrapper .contact-success-message h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--contact-primary);
+    margin-bottom: 0.75rem;
+}
+
+.contacto-ebedix-wrapper .contact-success-message p {
+    font-size: 1rem;
+    color: var(--contact-text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contacto-ebedix-wrapper .btn-new-request {
+    padding: 0.75rem 2rem;
+    background: transparent;
+    border: 2px solid var(--contact-accent-blue);
+    color: var(--contact-accent-blue);
+    border-radius: 10px;
+    font-family: var(--contact-font);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contacto-ebedix-wrapper .btn-new-request:hover {
+    background: var(--contact-accent-blue);
+    color: var(--contact-text-white);
+}
+
+@keyframes ebedixContactFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- FOOTER ---- */
+.contacto-ebedix-wrapper .contact-footer-bottom {
+    margin-top: auto;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid var(--contact-border);
+    padding: 3rem 5% 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.contacto-ebedix-wrapper .contact-footer-static-img {
+    height: 85px;
+    object-fit: contain;
+}
+
+.contacto-ebedix-wrapper .contact-header-legal {
+    font-size: 0.85rem;
+    color: var(--contact-text-muted);
+    line-height: 1.8;
+}
+
+.contacto-ebedix-wrapper .contact-header-legal strong {
+    color: var(--contact-text-dark);
+    font-weight: 600;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 992px) {
+    .contacto-ebedix-wrapper .contact-main-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 1rem;
+    }
+    .contacto-ebedix-wrapper .contact-left-column {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .contacto-ebedix-wrapper .direct-contact-card {
+        flex: 1;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-ebedix-wrapper .contact-header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 5%;
+    }
+    .contacto-ebedix-wrapper .contact-brand-title .brand-platforms {
+        font-size: 2.8rem;
+    }
+    .contacto-ebedix-wrapper .contact-left-column {
+        flex-direction: column;
+    }
+    .contacto-ebedix-wrapper .contact-form-card {
+        padding: 2rem 1.5rem;
+    }
+    .contacto-ebedix-wrapper .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- ============================================
+     HTML — CONTACTO EBEDIX OFICIAL
+     ============================================ -->
+<div class="contacto-ebedix-wrapper">
+    <!-- HEADER (solo logo EBEDIX Platforms, sin badge EX-View) -->
+    <header class="contact-header-top">
+        <a href="https://ebedix.com/" class="contact-brand-title" style="text-decoration: none;">
+            <img src="https://ebedix.com/wp-content/uploads/2026/07/ebedix.webp" alt="EBEDIX" class="brand-logo-img">
+            <span class="brand-platforms">Platforms</span>
+        </a>
+    </header>
+
+    <!-- MAIN TITLE -->
+    <div class="contact-intro">
+        <h1 class="contact-welcome">Para más información de nuestros productos y servicios, por favor contáctenos.</h1>
+    </div>
+
+    <!-- TWO COLUMN LAYOUT -->
+    <main class="contact-main-grid">
+        <!-- LEFT COLUMN -->
+        <section class="contact-left-column">
+            <a href="https://wa.me/573332915577" target="_blank" rel="noopener noreferrer" class="direct-contact-card whatsapp-card">
+                <div class="card-icon-wrapper whatsapp-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>WhatsApp</h3>
+                    <p>Atención directa y rápida.</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+
+            <div class="direct-contact-card email-card" id="ebedix-email-card" role="button" tabindex="0" style="cursor: pointer;">
+                <div class="card-icon-wrapper email-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Correo Electrónico</h3>
+                    <p class="email-address" id="ebedix-email-address-text">info@ebedix.com</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT COLUMN: FORM -->
+        <section class="contact-right-column">
+            <div class="contact-form-card">
+                <h2 class="contact-form-title">Envíanos tu solicitud</h2>
+                <p class="contact-form-subtitle">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+
+                <form id="ebedix-contact-form" novalidate>
+                    <div class="contact-form-grid">
+                        <!-- Nombre -->
+                        <div class="contact-field" data-required="true">
+                            <label for="ebedix-nombre">Nombre <span class="required">*</span></label>
+                            <input type="text" id="ebedix-nombre" name="nombre" placeholder="Tu nombre" autocomplete="given-name">
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Este campo es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="contact-field" data-required="true">
+                            <label for="ebedix-apellidos">Apellidos <span class="required">*</span></label>
+                            <input type="text" id="ebedix-apellidos" name="apellidos" placeholder="Tus apellidos" autocomplete="family-name">
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Este campo es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Correo electrónico -->
+                        <div class="contact-field" data-required="true" data-type="email">
+                            <label for="ebedix-email">Correo electrónico <span class="required">*</span></label>
+                            <input type="email" id="ebedix-email" name="email" placeholder="correo@ejemplo.com" autocomplete="email">
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                <span class="error-text">Este campo es obligatorio</span>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="contact-field">
+                            <label for="ebedix-telefono">Teléfono</label>
+                            <input type="tel" id="ebedix-telefono" name="telefono" placeholder="+57 300 000 0000" autocomplete="tel">
+                        </div>
+
+                        <!-- País -->
+                        <div class="contact-field" data-required="true">
+                            <label for="ebedix-pais">País <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="ebedix-pais" name="pais">
+                                    <option value="" disabled selected>Seleccionar país</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="México">México</option>
+                                    <option value="Perú">Perú</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="España">España</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Este campo es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Motivo de contacto -->
+                        <div class="contact-field" data-required="true">
+                            <label for="ebedix-area">Motivo de contacto <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="ebedix-area" name="area">
+                                    <option value="" disabled selected>Seleccione una opción</option>
+                                    <option value="Solicitudes de servicios">Solicitudes de servicios</option>
+                                    <option value="Preguntas, quejas, reclamos y/o felicitaciones">Preguntas, quejas, reclamos y/o felicitaciones</option>
+                                    <option value="Información general de EBEDIX y sus plataformas (EX-View, EX-View Solar y EX-VIZ)">Información general de EBEDIX y sus plataformas (EX-View, EX-View Solar y EX-VIZ)</option>
+                                    <option value="Financiero">Financiero</option>
+                                </select>
+                            </div>
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Seleccione un motivo de contacto
+                            </div>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="contact-field full-width" data-required="true">
+                            <label for="ebedix-mensaje">Mensaje <span class="required">*</span></label>
+                            <textarea id="ebedix-mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Escribe un mensaje para continuar
+                            </div>
+                        </div>
+
+                        <!-- Consentimiento -->
+                        <div class="contact-field full-width checkbox-field" data-required="true">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="ebedix-consentimiento" name="consentimiento">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Acepta las <a href="#">políticas de privacidad</a> y los <a href="#">términos de servicio</a> de EBEDIX</span>
+                            </label>
+                            <div class="field-error">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Debes aceptar las políticas para continuar
+                            </div>
+                        </div>
+
+                        <!-- Botón Submit -->
+                        <div class="contact-submit-wrapper full-width">
+                            <button type="submit" class="contact-submit-btn" id="ebedix-submit-btn">
+                                <span>Enviar Solicitud</span>
+                                <div class="submit-spinner"></div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div class="contact-success-message" id="ebedix-contact-success">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>¡Mensaje enviado con éxito!</h3>
+                    <p>Gracias por contactarnos. Hemos recibido tu solicitud y un asesor de EBEDIX se pondrá en contacto contigo lo más pronto posible.</p>
+                    <button class="btn-new-request" id="ebedix-btn-new-request">Enviar otro mensaje</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="contact-footer-bottom">
+        <div class="contact-header-logos">
+            <img src="https://ebedix.com/wp-content/uploads/2026/07/ebedixplatforms.jpeg" alt="EBEDIX Platforms" class="contact-footer-static-img">
+        </div>
+        <div class="contact-header-legal">
+            <strong>EBEDIX | Todos los derechos reservados</strong><br>
+            EBEDIX Platforms conformado por: EX-View, EX-View Solar y EX-VIZ
+        </div>
+    </footer>
+</div>
+
+<script>
+/**
+ * EBEDIX Platforms — Contacto Oficial
+ * Validación + envío por EmailJS
+ */
+(function () {
+    'use strict';
+
+    // ⚙️  CONFIG — EmailJS
+    const EMAILJS_CONFIG = {
+        publicKey: 'aWcCKXvPAVypqGz0P',   
+        serviceId: 'service_uf6dbfm', 
+        templateId: 'template_z20di2a'   
+    };
+
+    const PAGE_TAG = 'EBEDIX';
+
+    // DOM
+    const form           = document.getElementById('ebedix-contact-form');
+    const submitBtn      = document.getElementById('ebedix-submit-btn');
+    const successMessage = document.getElementById('ebedix-contact-success');
+    const newRequestBtn  = document.getElementById('ebedix-btn-new-request');
+    const emailCard      = document.getElementById('ebedix-email-card');
+    const emailText      = document.getElementById('ebedix-email-address-text');
+
+    // COPY EMAIL
+    if (emailCard && emailText) {
+        emailCard.addEventListener('click', function () {
+            var email = 'info@ebedix.com';
+            navigator.clipboard.writeText(email).then(function() {
+                emailText.textContent = '¡Copiado!';
+                emailText.style.color = 'var(--contact-success)';
+                setTimeout(function() {
+                    emailText.textContent = email;
+                    emailText.style.color = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Error al copiar correo:', err);
+            });
+        });
+    }
+
+    // VALIDATION
+    function validateForm() {
+        var isValid = true;
+        var requiredFields = form.querySelectorAll('.contact-field[data-required="true"]');
+
+        requiredFields.forEach(function(field) {
+            var input = field.querySelector('input, select, textarea');
+            if (!input) return;
+
+            var value = input.value.trim();
+            field.classList.remove('error');
+
+            if (!value) {
+                field.classList.add('error');
+                isValid = false;
+                return;
+            }
+
+            if (field.dataset.type === 'email') {
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    field.classList.add('error');
+                    var errorEl = field.querySelector('.field-error span');
+                    if (errorEl) errorEl.textContent = 'Correo electrónico inválido';
+                    isValid = false;
+                }
+            }
+        });
+
+        var privacyCheckbox = document.getElementById('ebedix-consentimiento');
+        var privacyField = privacyCheckbox ? privacyCheckbox.closest('.contact-field') : null;
+        if (privacyCheckbox && !privacyCheckbox.checked) {
+            if (privacyField) privacyField.classList.add('error');
+            isValid = false;
+        } else if (privacyField) {
+            privacyField.classList.remove('error');
+        }
+
+        return isValid;
+    }
+
+    // Clear errors on input
+    if (form) {
+        form.querySelectorAll('input, select, textarea').forEach(function(input) {
+            input.addEventListener('input', function () {
+                var field = this.closest('.contact-field');
+                if (field) field.classList.remove('error');
+                if (field && field.dataset.type === 'email') {
+                    var errorEl = field.querySelector('.field-error span');
+                    if (errorEl) errorEl.textContent = 'Este campo es obligatorio';
+                }
+            });
+        });
+
+        var privacyCheckbox = document.getElementById('ebedix-consentimiento');
+        if (privacyCheckbox) {
+            privacyCheckbox.addEventListener('change', function () {
+                var field = this.closest('.contact-field');
+                if (this.checked && field) field.classList.remove('error');
+            });
+        }
+    }
+
+    // SUBMIT
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!validateForm()) return;
+
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            var motivo    = document.getElementById('ebedix-area').value;
+            var nombre    = document.getElementById('ebedix-nombre').value.trim();
+            var apellidos = document.getElementById('ebedix-apellidos').value.trim();
+            var correo    = document.getElementById('ebedix-email').value.trim();
+            var telefono  = document.getElementById('ebedix-telefono').value.trim() || 'No indicado';
+            var pais      = document.getElementById('ebedix-pais').value;
+            var mensaje   = document.getElementById('ebedix-mensaje').value.trim();
+            var fecha     = new Date().toLocaleString('es-CO', {
+                timeZone: 'America/Bogota',
+                day: '2-digit', month: '2-digit', year: 'numeric',
+                hour: '2-digit', minute: '2-digit'
+            });
+
+            var asunto = '[' + PAGE_TAG + '] - ' + motivo;
+
+            var emailBody = '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><style>body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:0}.wrapper{max-width:600px;margin:30px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1)}.header{background:linear-gradient(135deg,#0a1628,#0f2d5e);padding:28px 32px;text-align:center}.header h1{color:#fff;font-size:22px;margin:0 0 4px;letter-spacing:1px}.header p{color:#7eceff;font-size:13px;margin:0}.badge{display:inline-block;background:#1e88e5;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-top:10px}.body{padding:28px 32px}.field{margin-bottom:18px;border-bottom:1px solid #eee;padding-bottom:14px}.field:last-child{border-bottom:none}.label{font-size:11px;text-transform:uppercase;color:#888;letter-spacing:.8px;margin-bottom:4px}.value{font-size:15px;color:#222;font-weight:500}.mensaje-box{background:#f7f9fc;border-left:4px solid #1e88e5;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#333;line-height:1.6;white-space:pre-wrap}.footer{background:#f4f4f4;padding:16px 32px;text-align:center;font-size:12px;color:#aaa}.footer strong{color:#555}</style></head><body><div class="wrapper"><div class="header"><h1>EBEDIX Platforms</h1><p>Nueva solicitud recibida desde <strong style="color:#fff">EBEDIX (Página oficial)</strong></p><span class="badge">' + motivo + '</span></div><div class="body"><div class="field"><div class="label">Nombre completo</div><div class="value">' + nombre + ' ' + apellidos + '</div></div><div class="field"><div class="label">Correo electrónico</div><div class="value">' + correo + '</div></div><div class="field"><div class="label">Teléfono</div><div class="value">' + telefono + '</div></div><div class="field"><div class="label">País</div><div class="value">' + pais + '</div></div><div class="field"><div class="label">Motivo de contacto</div><div class="value">' + motivo + '</div></div><div class="field"><div class="label">Mensaje</div><div class="mensaje-box">' + mensaje + '</div></div><div class="field" style="border-bottom:none"><div class="label">Fecha y hora de envío (Colombia)</div><div class="value">' + fecha + '</div></div></div><div class="footer"><strong>EBEDIX | Todos los derechos reservados</strong><br>EX-View · EX-View Solar · EX-VIZ</div></div></body></html>';
+
+            sendEmail({
+                subject:    asunto,
+                from_name:  nombre + ' ' + apellidos,
+                from_email: correo,
+                email_body: emailBody
+            });
+        });
+    }
+
+    // SEND EMAIL
+    function sendEmail(params) {
+        if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY') {
+            emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, params, EMAILJS_CONFIG.publicKey)
+            .then(function () { showSuccess(); })
+            .catch(function (error) {
+                console.error('EmailJS error:', error);
+                alert('Ocurrió un error al enviar el formulario. Por favor intenta de nuevo o escríbenos directamente a info@ebedix.com');
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            });
+        } else {
+            console.warn('⚠️  EmailJS no configurado. Revisa EMAILJS_CONFIG.');
+            console.info('Datos que se enviarían:', params);
+            setTimeout(showSuccess, 1500);
+        }
+    }
+
+    // SUCCESS
+    function showSuccess() {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        form.style.display = 'none';
+        successMessage.classList.add('show');
+    }
+
+    if (newRequestBtn) {
+        newRequestBtn.addEventListener('click', function () {
+            form.reset();
+            form.style.display = 'block';
+            successMessage.classList.remove('show');
+            form.querySelectorAll('.contact-field').forEach(function(f) { f.classList.remove('error'); });
+        });
+    }
+
+    // LOAD EmailJS SDK
+    function loadEmailJSSDK() {
+        if (EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY') {
+            console.info('ℹ️ EmailJS no configurado.');
+            return;
+        }
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+        script.async = true;
+        script.onload = function () {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init(EMAILJS_CONFIG.publicKey);
+                console.info('✅ EmailJS inicializado.');
+            }
+        };
+        document.head.appendChild(script);
+    }
+
+    loadEmailJSSDK();
+})();
+</script>

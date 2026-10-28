@@ -1,0 +1,46 @@
+# ----------------------------------------------------------------------
+# 1. Prioridad: Mostrar index.html primero, pero mantener WordPress (index.php)
+# ----------------------------------------------------------------------
+DirectoryIndex index.html index.php
+
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------------------------
+# 2. Si alguien escribe tudominio.com/index o tudominio.com/index.html,
+#    redirigir con 301 a la raíz "/"
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/(index|index\.html) [NC]
+RewriteRule ^ / [R=301,L]
+
+# ----------------------------------------------------------------------
+# 3. Exclusiones para WordPress y Recursos Reales
+#    Si la petición es hacia wp-admin, wp-login, etc., dejar pasar a WordPress
+# ----------------------------------------------------------------------
+RewriteRule ^(wp-(admin|content|includes|login\.php|cron\.php|json)) - [L]
+
+# Si el archivo o directorio solicitado ya existe físicamente, servirlo directamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ----------------------------------------------------------------------
+# 4. URLs amigables para tus páginas HTML (ej. /nosotros -> nosotros.html)
+# ----------------------------------------------------------------------
+# A. Redirigir petición externa de /pagina.html a /pagina (limpia la barra del navegador)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# B. Si el usuario visita /nombre y existe nombre.html, cargarlo internamente
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)/?$ $1.html [NC,L]
+
+# ----------------------------------------------------------------------
+# 5. Fallback a WordPress
+#    Cualquier otra URL que no sea un HTML ni un recurso estático se envía a WordPress
+# ----------------------------------------------------------------------
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]

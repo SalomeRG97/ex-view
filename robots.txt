@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Deshabilitar rastreo en archivos de administración de WordPress y rutas privadas
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-login.php
+Disallow: /documentos/
+
+# Permitir recursos públicos
+Allow: /wp-admin/admin-ajax.php
+Allow: /media/
+
+# Mapa del sitio
+Sitemap: https://ex-view.com/sitemap.xml

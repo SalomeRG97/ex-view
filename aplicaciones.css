@@ -1,0 +1,549 @@
+/* ==========================================================================
+   Estilos de la Página de Aplicaciones (aplicaciones.css)
+   EX-VIEW Solar - Centro de Acceso a Plataformas
+   ========================================================================== */
+
+.apps-hero {
+    position: relative;
+    padding: 5rem 5% 4rem;
+    background: linear-gradient(135deg, #0e1722 0%, var(--primary-color) 50%, #1e2c3d 100%);
+    color: var(--text-white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.apps-hero::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -100px;
+    top: -150px;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.18), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.apps-hero::after {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: -120px;
+    bottom: -150px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.apps-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.apps-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid rgba(250, 204, 21, 0.5);
+    background: rgba(250, 204, 21, 0.08);
+    border-radius: 50px;
+    color: var(--secondary-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.apps-eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--secondary-color);
+    animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.6;
+    }
+}
+
+.apps-hero h1 {
+    font-size: 2.9rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.apps-hero h1 span.highlight {
+    color: var(--secondary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.apps-hero p.subtitle {
+    font-size: 1.12rem;
+    font-weight: 300;
+    color: #cbd5e1;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.apps-yellow-bar {
+    width: 64px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    margin: 1.8rem auto 0;
+    box-shadow: 0 2px 8px rgba(250, 204, 21, 0.4);
+}
+
+/* ==========================================================================
+   Sección de Tarjetas de Aplicación
+   ========================================================================== */
+
+.apps-section {
+    padding: 4.5rem 5% 5rem;
+    background-color: #f8fafc;
+    position: relative;
+}
+
+.apps-container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Tarjeta individual */
+.app-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    padding: 2.8rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    overflow: hidden;
+}
+
+.app-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.16);
+}
+
+/* Estilo destacado para la Versión 2 */
+.app-card.featured {
+    border: 2px solid var(--secondary-color);
+    background: linear-gradient(180deg, #ffffff 0%, #fffef5 100%);
+    box-shadow: 0 12px 35px -8px rgba(250, 204, 21, 0.22);
+}
+
+.app-card.featured:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px -12px rgba(250, 204, 21, 0.35);
+    border-color: #eab308;
+}
+
+/* Insignia / Badge */
+.app-badge-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+.app-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.35rem 0.95rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.app-badge.badge-v1 {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+.app-badge.badge-v2 {
+    background: #fef08a;
+    color: #854d0e;
+    border: 1px solid #facc15;
+    box-shadow: 0 2px 8px rgba(250, 204, 21, 0.25);
+}
+
+.app-version-chip {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #94a3b8;
+    background: #f8fafc;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+}
+
+/* Encabezado y títulos de la tarjeta */
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-icon {
+    transform: scale(1.05);
+}
+
+.app-icon.icon-v1 {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: var(--secondary-color);
+    box-shadow: 0 8px 16px rgba(30, 41, 59, 0.25);
+}
+
+.app-icon.icon-v2 {
+    background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+    color: #1e293b;
+    box-shadow: 0 8px 18px rgba(234, 179, 8, 0.35);
+}
+
+.app-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.app-titles h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.app-titles span.app-subtitle {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+/* Descripción */
+.app-description {
+    font-size: 0.96rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+}
+
+/* Lista de características */
+.app-features-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.9rem;
+}
+
+.app-features {
+    list-style: none;
+    margin-bottom: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.app-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: #334155;
+    line-height: 1.45;
+}
+
+.app-features li svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.app-features.features-v1 li svg {
+    color: #0284c7;
+}
+
+.app-features.features-v2 li svg {
+    color: #ca8a04;
+}
+
+/* Botones de acción */
+.app-action {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-app-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-app-login svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn-app-login:hover svg {
+    transform: translateX(4px);
+}
+
+/* Botón v1 */
+.btn-app-v1 {
+    background: var(--primary-color);
+    color: #ffffff !important;
+    border: 2px solid transparent;
+}
+
+.btn-app-v1:hover {
+    background: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+}
+
+/* Botón v2 */
+.btn-app-v2 {
+    background: var(--secondary-color);
+    color: var(--primary-color) !important;
+    box-shadow: 0 6px 18px rgba(250, 204, 21, 0.4);
+}
+
+.btn-app-v2:hover {
+    background: #eab308;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(234, 179, 8, 0.5);
+}
+
+.app-url-caption {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    word-break: break-all;
+}
+
+.app-url-caption a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.app-url-caption a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Caja de Soporte y Asistencia
+   ========================================================================== */
+
+.apps-support-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 20px;
+    padding: 3rem 3.5rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.apps-support-content {
+    max-width: 620px;
+}
+
+.apps-support-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apps-support-content h3 span.question-icon {
+    color: var(--secondary-color);
+}
+
+.apps-support-content p {
+    font-size: 0.98rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.apps-support-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.btn-support-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1.4rem;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-support-contact svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-support-ws {
+    background: #25D366;
+    color: #ffffff !important;
+}
+
+.btn-support-ws:hover {
+    background: #1eb956;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+.btn-support-mail {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.btn-support-mail:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .apps-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto 3rem;
+    }
+
+    .apps-support-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .apps-support-actions {
+        width: 100%;
+    }
+
+    .btn-support-contact {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .apps-hero {
+        padding: 4rem 5% 3rem;
+    }
+
+    .apps-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .apps-hero p.subtitle {
+        font-size: 1rem;
+    }
+
+    .apps-section {
+        padding: 3.5rem 5% 4rem;
+    }
+
+    .app-card {
+        padding: 2.2rem 1.6rem;
+    }
+
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
+
+    .apps-support-actions {
+        flex-direction: column;
+    }
+
+    .btn-support-contact {
+        width: 100%;
+    }
+}

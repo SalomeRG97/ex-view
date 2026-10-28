@@ -5,15 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabaja con nosotros - Ex-view Solar</title>
-    <!-- Incluir CSS específico de esta página -->
-    <link rel="stylesheet" href="trabaja-con-nosotros.css">
+    <!-- Incluir CSS específico de esta página y estilos globales -->
+    <link rel="stylesheet" href="styles.css?v=19">
+    <link rel="stylesheet" href="trabaja-con-nosotros.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Incluir JS específico de esta página -->
-    <script src="trabaja-con-nosotros.js" defer></script>
+    <script src="script.js?v=9" defer></script>
+    <script src="trabaja-con-nosotros.js?v=1" defer></script>
 </head>
 
 <body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="/">
+                    <img src="media/logo-nav.png" alt="Ex-view Solar Logo" class="nav-logo">
+                </a>
+            </div>
+            <nav class="nav-left">
+                <ul>
+                    <li class="nav-dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle">Soluciones <span class="arrow">▾</span></a>
+                        <div class="dropdown-content">
+                            <a href="/#productos">Thermoscope</a>
+                            <a href="/#sentinel">Sentinel</a>
+                            <a href="pathfinder">Pathfinder</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle">Empresa <span class="arrow">▾</span></a>
+                        <div class="dropdown-content">
+                            <a href="nosotros">Acerca de nosotros</a>
+                            <a href="nosotros#valores">Nuestros valores</a>
+                            <a href="nosotros#equipo">Nuestro equipo</a>
+                            <a href="nosotros#presencia">Presencia internacional</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="trabaja-con-nosotros">Trabaja con nosotros</a></li>
+                <li><a href="sostenibilidad">Sostenibilidad</a></li>
+                <li><a href="contacto?tab=agendar" class="btn-demo">Contáctanos</a></li>
+                <li><a href="https://d48p9darmym8b.cloudfront.net" class="btn-nav-login" target="_blank">Login</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <!-- Sección 1: Hero -->
         <section class="trabaja-hero">
@@ -162,6 +201,78 @@
             </div>
         </section>
     </main>
+
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-container">
+            <!-- Left: Logo & Social -->
+            <div class="footer-brand">
+                <img src="media/Exviewsolarlogo.png" alt="Ex-View Solar Logo" class="footer-logo">
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/ebedix/" aria-label="LinkedIn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@ebedix" aria-label="YouTube" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/ex.view.solar" aria-label="Instagram" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.873 5.873 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.861 5.861 0 0 0-1.384-2.126A5.873 5.873 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 1 0 12.324 6.162 6.162 0 0 1 0-12.324zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm3.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Middle: Info -->
+            <div class="footer-info">
+                <ul>
+                    <li>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                        </span>
+                        +57 (604) 560-6352 (Sede Colombia)
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                            </svg>
+                        </span>
+                        Cra. 42 #3 Sur 81 Torre 1 Piso 15, Medellín, Colombia
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </span>
+                        <a href="javascript:void(0)" onclick="const el = this; navigator.clipboard.writeText('solar@ex-view.com').then(() => { el.textContent = '¡Copiado!'; setTimeout(() => el.textContent = 'solar@ex-view.com', 2000); })">solar@ex-view.com</a>
+                    </li>
+                </ul>
+                <p class="copyright">&copy; EX-VIEW SOLAR 2026</p>
+            </div>
+
+            <!-- Right: Legal -->
+            <div class="footer-legal">
+                <ul>
+                    <li><a href="politicas">Términos de servicio y políticas de
+                            privacidad</a></li>
+                    <li><a href="legal">Términos y servicios legales</a></li>
+                </ul>
+                <p class="dev-credits">Desarrollado por EXVIEW SOLAR Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
